@@ -28,6 +28,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2B8AB2A31556ABC1004E8A86 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		2BB769531556699D00C129F2 /* sudokugame */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = sudokugame; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BB769571556699D00C129F2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2BB7695A1556699D00C129F2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -79,6 +80,7 @@
 		2BB769591556699D00C129F2 /* sudokugame */ = {
 			isa = PBXGroup;
 			children = (
+				2B8AB2A31556ABC1004E8A86 /* README.md */,
 				2BB76965155669B000C129F2 /* Cell.h */,
 				2BB76966155669B000C129F2 /* Cell.m */,
 				2BB76968155669BC00C129F2 /* Sudoku.h */,

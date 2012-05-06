@@ -16,6 +16,7 @@
     int value;
     NSMutableArray *validList;
 }
+
 @property (assign,readwrite)int x;
 @property (assign,readwrite)int y;
 @property (assign,readwrite)int value;

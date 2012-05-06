@@ -43,6 +43,11 @@
     [super dealloc];
 }
 
+-(Cell*)GetCellWithX:(int)x Y:(int)y
+{
+    return cells[x][y];
+}
+
 /*从1-9中验证值是否可取*/
 -(bool)IsXYvalidWithCell:(Cell *)c N:(int)n
 {
@@ -93,32 +98,31 @@
 }
 
 // 用经典的深度搜索来生成一个可行解
--(void)FillCellWithX:(int)x Y:(int)y;
+-(void)FillCell:(Cell*)cell
 {
-
-    if([cells[x][y].validList count] != 0)//若取值列表有值则随即选取一个并从取值列表中删除
+    if([cell.validList count] != 0)//若取值列表有值则随即选取一个并从取值列表中删除
     {   
-        int size = [cells[x][y].validList count];
+        int size = [cell.validList count];
         srand((unsigned)time(NULL));
         int n = rand()%size;
         
-        cells[x][y].value = [[cells[x][y].validList objectAtIndex:n]intValue];
-        [cells[x][y].validList removeObjectAtIndex:n];
+        cell.value = [[cell.validList objectAtIndex:n]intValue];
+        [cell.validList removeObjectAtIndex:n];
     }
     else//若无值可取，那么它之前的Cell要重新再填一个，尝试，然后继续填充自己
     {
-        if(y != 0)
+        if(cell.y != 0)
         {
-            [self FillCellWithX:x Y:y-1];
+            [self FillCell:cells[cell.x][cell.y-1]];
         }
         else 
         {
-            [self FillCellWithX:x-1 Y:8];
+            [self FillCell:cells[cell.x-1][8]];
         }
         
-        [self InitValidlistforCell:cells[x][y]];
+        [self InitValidlistforCell:cell];
         
-        [self FillCellWithX:x Y:y];
+        [self FillCell:cell];
     }
 }
 
@@ -131,7 +135,7 @@
         {
             [self InitValidlistforCell:cells[i][j]];//为每个Cell构造可取值的列表
             
-            [self FillCellWithX:i Y:j];//从可取值列表中取值填入Cell
+            [self FillCell:cells[i][j]];//从可取值列表中取值填入Cell
         }
     }
 }

@@ -11,6 +11,7 @@
 #define random(x) (rand()%x+1)
 
 @implementation Cell
+
 @synthesize x;
 @synthesize y;
 @synthesize value;
