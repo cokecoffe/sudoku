@@ -32,41 +32,6 @@
     }
 }
 
-
-/*初始化可选值，随机1-9*/
--(void)InitValidList
-{
-    int i;
-    int j;
-    int arr[9];
-    
-    if (validList) 
-    {
-        [validList release];
-    }
-    validList = [[NSMutableArray alloc]init];
-    
-    for (i = 0; i<9; i++) 
-    {
-        while (TRUE) 
-        {
-            arr[i] = random(9);
-            for (j = i-1; j>=0; j--) 
-            {
-                if (arr[j] == arr[i]) 
-                {
-                    break;
-                }
-            }
-            if (j<0) 
-            {
-                break;
-            }
-        }
-        [validList addObject:[NSNumber numberWithInt:arr[i]]];
-    }
-}
-
 -(NSString*)description
 {
     NSString *des = [NSString stringWithFormat:@"[%d][%d],%d",x,y,value];

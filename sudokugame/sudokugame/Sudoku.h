@@ -14,8 +14,6 @@
     Cell *cells[9][9];
 }
 
-//@property (assign,readwrite) Cell *cells[9][9];
-
 -(void)FillCellWithX:(int)x Y:(int)y;
 -(void)ShowCells;
 -(void)createMatrix;

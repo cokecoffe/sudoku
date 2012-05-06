@@ -22,7 +22,6 @@
 @property (assign,readwrite)NSMutableArray *validList;
 
 -(id)initWithX:(int)fx Y:(int)fy;
--(void)InitValidList;
--(bool)IsXYvalid:(int)index;
+
 
 @end
