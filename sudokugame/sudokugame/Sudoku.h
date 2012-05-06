@@ -14,7 +14,13 @@
     Cell *cells[9][9];
 }
 
+//@property (assign,readwrite) Cell *cells[9][9];
+
 -(void)FillCellWithX:(int)x Y:(int)y;
 -(void)ShowCells;
+-(void)createMatrix;
+
+-(bool)IsXYvalidWithCell:(Cell *)c N:(int)n;
+-(void)InitValidlistforCell:(Cell*)cell;
 
 @end

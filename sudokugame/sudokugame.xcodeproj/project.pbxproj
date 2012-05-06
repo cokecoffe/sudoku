@@ -79,11 +79,11 @@
 		2BB769591556699D00C129F2 /* sudokugame */ = {
 			isa = PBXGroup;
 			children = (
-				2BB7695A1556699D00C129F2 /* main.m */,
 				2BB76965155669B000C129F2 /* Cell.h */,
 				2BB76966155669B000C129F2 /* Cell.m */,
 				2BB76968155669BC00C129F2 /* Sudoku.h */,
 				2BB76969155669BC00C129F2 /* Sudoku.m */,
+				2BB7695A1556699D00C129F2 /* main.m */,
 				2BB7695E1556699D00C129F2 /* sudokugame.1 */,
 				2BB7695C1556699D00C129F2 /* Supporting Files */,
 			);
@@ -239,6 +239,7 @@
 				2BB769641556699D00C129F2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

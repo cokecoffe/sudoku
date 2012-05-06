@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Sudoku.h"
 
 @interface Cell : NSObject
 {
@@ -15,8 +16,13 @@
     int value;
     NSMutableArray *validList;
 }
+@property (assign,readwrite)int x;
+@property (assign,readwrite)int y;
+@property (assign,readwrite)int value;
+@property (assign,readwrite)NSMutableArray *validList;
+
 -(id)initWithX:(int)fx Y:(int)fy;
--(int)getValidValue;
 -(void)InitValidList;
+-(bool)IsXYvalid:(int)index;
 
 @end

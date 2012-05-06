@@ -15,6 +15,7 @@ int main(int argc, const char * argv[])
     @autoreleasepool {
         
         Sudoku *mySudo = [[Sudoku alloc]init];
+        [mySudo createMatrix];
         [mySudo ShowCells];
         [mySudo release];
         

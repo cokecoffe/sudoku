@@ -11,15 +11,19 @@
 #define random(x) (rand()%x+1)
 
 @implementation Cell
+@synthesize x;
+@synthesize y;
+@synthesize value;
+@synthesize validList;
 
 
--(id)initWithX:(int)fx Y:(int)fy
+-(id)initWithX:(int)fx Y:(int)fy 
 {
     if (self = [super init]) {
         x = fx;
         y = fy;
         value = 0;
-        [self InitValidList];
+        validList = [NSMutableArray array];
         return  self;
     }
     else 
@@ -27,19 +31,8 @@
         return nil;
     }
 }
-/*获取一个可以设置的值，并从可选值中删除已选的值，若无可选返回-1*/
--(int)getValidValue
-{
-    if ([validList count]>0) 
-    {
-        [validList removeLastObject];
-        return [[validList lastObject]intValue];
-    }
-    else 
-    {
-        return -1;
-    }
-}
+
+
 /*初始化可选值，随机1-9*/
 -(void)InitValidList
 {
