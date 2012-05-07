@@ -7,21 +7,30 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "global.h"
 
 @class ModeSelectViewController;
+@class RankViewController;
+@class GameViewController;
 
 @interface FirstViewController : UIViewController
 {
     IBOutlet UIButton *bt_Begin;
     IBOutlet UIButton *bt_Mode;
     IBOutlet UIButton *bt_Rank;
-    ModeSelectViewController *modelVC;
+    ModeSelectViewController *modeVC;
+    RankViewController *rankVC;
+    GameViewController *gameVC;
+    
 }
 
-@property(retain,nonatomic) ModeSelectViewController *modelVC;
+@property(retain,nonatomic) ModeSelectViewController *modeVC;
+@property(retain,nonatomic) RankViewController *rankVC;
+@property(retain,nonatomic) GameViewController *gameVC;
 
 -(IBAction)ModeSelect:(id)sender;
 -(IBAction)RankList:(id)sender;
 -(IBAction)StartGame:(id)sender;
 
+-(void)returnHomePageFromIndex:(int)pageIndex;
 @end

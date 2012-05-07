@@ -1,25 +1,27 @@
 //
-//  ModeSelectViewController.m
+//  RankViewController.m
 //  SudoTest
 //
 //  Created by 可可 王 on 12-5-7.
 //  Copyright (c) 2012年 __MyCompanyName__. All rights reserved.
 //
 
-#import "ModeSelectViewController.h"
+#import "RankViewController.h"
 
-@interface ModeSelectViewController ()
+
+@interface RankViewController ()
 
 @end
 
-@implementation ModeSelectViewController
+@implementation RankViewController
 @synthesize delegate;
 
--(IBAction)returnHomePage:(id)sender
+
+-(IBAction)BackToHome:(id)sender
 {
     if ([delegate respondsToSelector:@selector(returnHomePageFromIndex:)])
     {
-        [delegate returnHomePageFromIndex:MODE_PAGE];
+        [delegate returnHomePageFromIndex:RANK_PAGE];
     }
 }
 

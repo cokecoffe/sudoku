@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		2BE008FD1558002D0001CC85 /* ModeSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BE008FB1558002D0001CC85 /* ModeSelectViewController.m */; };
 		2BE008FE1558002D0001CC85 /* ModeSelectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BE008FC1558002D0001CC85 /* ModeSelectViewController.xib */; };
+		2BE0090F15581C580001CC85 /* RankViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BE0090D15581C580001CC85 /* RankViewController.m */; };
+		2BE0091015581C580001CC85 /* RankViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BE0090E15581C580001CC85 /* RankViewController.xib */; };
+		2BE0091415581CDB0001CC85 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BE0091215581CDB0001CC85 /* GameViewController.m */; };
+		2BE0091515581CDB0001CC85 /* GameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BE0091315581CDB0001CC85 /* GameViewController.xib */; };
 		2BEDD4EC1557EE5400CCA5BA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BEDD4EB1557EE5400CCA5BA /* UIKit.framework */; };
 		2BEDD4EE1557EE5400CCA5BA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BEDD4ED1557EE5400CCA5BA /* Foundation.framework */; };
 		2BEDD4F01557EE5400CCA5BA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BEDD4EF1557EE5400CCA5BA /* CoreGraphics.framework */; };
@@ -24,6 +28,13 @@
 		2BE008FA1558002D0001CC85 /* ModeSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ModeSelectViewController.h; path = ../ModeSelectViewController.h; sourceTree = "<group>"; };
 		2BE008FB1558002D0001CC85 /* ModeSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ModeSelectViewController.m; path = ../ModeSelectViewController.m; sourceTree = "<group>"; };
 		2BE008FC1558002D0001CC85 /* ModeSelectViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ModeSelectViewController.xib; path = ../ModeSelectViewController.xib; sourceTree = "<group>"; };
+		2BE0090C15581C580001CC85 /* RankViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RankViewController.h; sourceTree = "<group>"; };
+		2BE0090D15581C580001CC85 /* RankViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RankViewController.m; sourceTree = "<group>"; };
+		2BE0090E15581C580001CC85 /* RankViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RankViewController.xib; sourceTree = "<group>"; };
+		2BE0091115581CDB0001CC85 /* GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
+		2BE0091215581CDB0001CC85 /* GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
+		2BE0091315581CDB0001CC85 /* GameViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GameViewController.xib; sourceTree = "<group>"; };
+		2BE0091615582C430001CC85 /* global.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = global.h; sourceTree = "<group>"; };
 		2BEDD4E71557EE5400CCA5BA /* SudoTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SudoTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BEDD4EB1557EE5400CCA5BA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		2BEDD4ED1557EE5400CCA5BA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -85,14 +96,21 @@
 		2BEDD4F11557EE5400CCA5BA /* SudoTest */ = {
 			isa = PBXGroup;
 			children = (
+				2BE0091615582C430001CC85 /* global.h */,
 				2BEDD4FA1557EE5400CCA5BA /* AppDelegate.h */,
 				2BEDD4FB1557EE5400CCA5BA /* AppDelegate.m */,
 				2BEDD5091557F04600CCA5BA /* FirstViewController.h */,
 				2BEDD50A1557F04600CCA5BA /* FirstViewController.m */,
 				2BEDD50B1557F04600CCA5BA /* FirstViewController.xib */,
+				2BE0090C15581C580001CC85 /* RankViewController.h */,
+				2BE0090D15581C580001CC85 /* RankViewController.m */,
+				2BE0090E15581C580001CC85 /* RankViewController.xib */,
 				2BE008FA1558002D0001CC85 /* ModeSelectViewController.h */,
 				2BE008FB1558002D0001CC85 /* ModeSelectViewController.m */,
 				2BE008FC1558002D0001CC85 /* ModeSelectViewController.xib */,
+				2BE0091115581CDB0001CC85 /* GameViewController.h */,
+				2BE0091215581CDB0001CC85 /* GameViewController.m */,
+				2BE0091315581CDB0001CC85 /* GameViewController.xib */,
 				2BEDD4F21557EE5400CCA5BA /* Supporting Files */,
 			);
 			path = SudoTest;
@@ -172,6 +190,8 @@
 				2BEDD5081557EF3300CCA5BA /* Default@2x.png in Resources */,
 				2BEDD50D1557F04600CCA5BA /* FirstViewController.xib in Resources */,
 				2BE008FE1558002D0001CC85 /* ModeSelectViewController.xib in Resources */,
+				2BE0091015581C580001CC85 /* RankViewController.xib in Resources */,
+				2BE0091515581CDB0001CC85 /* GameViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,6 +206,8 @@
 				2BEDD4FC1557EE5400CCA5BA /* AppDelegate.m in Sources */,
 				2BEDD50C1557F04600CCA5BA /* FirstViewController.m in Sources */,
 				2BE008FD1558002D0001CC85 /* ModeSelectViewController.m in Sources */,
+				2BE0090F15581C580001CC85 /* RankViewController.m in Sources */,
+				2BE0091415581CDB0001CC85 /* GameViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

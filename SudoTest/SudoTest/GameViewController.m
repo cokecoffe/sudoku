@@ -1,27 +1,18 @@
 //
-//  ModeSelectViewController.m
+//  GameViewController.m
 //  SudoTest
 //
 //  Created by 可可 王 on 12-5-7.
 //  Copyright (c) 2012年 __MyCompanyName__. All rights reserved.
 //
 
-#import "ModeSelectViewController.h"
+#import "GameViewController.h"
 
-@interface ModeSelectViewController ()
+@interface GameViewController ()
 
 @end
 
-@implementation ModeSelectViewController
-@synthesize delegate;
-
--(IBAction)returnHomePage:(id)sender
-{
-    if ([delegate respondsToSelector:@selector(returnHomePageFromIndex:)])
-    {
-        [delegate returnHomePageFromIndex:MODE_PAGE];
-    }
-}
+@implementation GameViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

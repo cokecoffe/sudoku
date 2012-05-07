@@ -1,5 +1,5 @@
 //
-//  ModeSelectViewController.h
+//  RankViewController.h
 //  SudoTest
 //
 //  Created by 可可 王 on 12-5-7.
@@ -9,12 +9,13 @@
 #import <UIKit/UIKit.h>
 #import "global.h"
 
-@interface ModeSelectViewController : UIViewController
+@interface RankViewController : UIViewController
 {
     id delegate;
 }
 
 @property(assign) id delegate;
 
--(IBAction)returnHomePage:(id)sender;
+-(IBAction)BackToHome:(id)sender;
+
 @end
