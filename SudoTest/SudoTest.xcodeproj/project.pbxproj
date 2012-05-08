@@ -7,6 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2BC99AC115595E6900F928A2 /* gamebg.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BC99ABB15595E6900F928A2 /* gamebg.png */; };
+		2BC99AC215595E6900F928A2 /* numgroup.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BC99ABC15595E6900F928A2 /* numgroup.png */; };
+		2BC99AC315595E6900F928A2 /* selection-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BC99ABD15595E6900F928A2 /* selection-button.png */; };
+		2BC99AC415595E6900F928A2 /* square-group.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BC99ABE15595E6900F928A2 /* square-group.png */; };
+		2BC99AC515595E6900F928A2 /* submit-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BC99ABF15595E6900F928A2 /* submit-button.png */; };
+		2BC99AC615595E6900F928A2 /* timebg.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BC99AC015595E6900F928A2 /* timebg.png */; };
+		2BC99AC915595E8500F928A2 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BC99AC815595E8500F928A2 /* Default@2x.png */; };
+		2BC99AD21559707300F928A2 /* homebg.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BC99ACA1559707300F928A2 /* homebg.png */; };
+		2BC99AD31559707300F928A2 /* homebutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BC99ACB1559707300F928A2 /* homebutton.png */; };
+		2BC99AD41559707300F928A2 /* homelg.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BC99ACC1559707300F928A2 /* homelg.png */; };
+		2BC99AD51559707300F928A2 /* information.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BC99ACD1559707300F928A2 /* information.png */; };
+		2BC99AD61559707300F928A2 /* levelselect-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BC99ACE1559707300F928A2 /* levelselect-button.png */; };
+		2BC99AD71559707300F928A2 /* modeselect-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BC99ACF1559707300F928A2 /* modeselect-button.png */; };
+		2BC99AD81559707300F928A2 /* modeselect.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BC99AD01559707300F928A2 /* modeselect.png */; };
+		2BC99AD91559707300F928A2 /* set.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BC99AD11559707300F928A2 /* set.png */; };
 		2BE008FD1558002D0001CC85 /* ModeSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BE008FB1558002D0001CC85 /* ModeSelectViewController.m */; };
 		2BE008FE1558002D0001CC85 /* ModeSelectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BE008FC1558002D0001CC85 /* ModeSelectViewController.xib */; };
 		2BE0090F15581C580001CC85 /* RankViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BE0090D15581C580001CC85 /* RankViewController.m */; };
@@ -19,7 +34,6 @@
 		2BEDD4F61557EE5400CCA5BA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2BEDD4F41557EE5400CCA5BA /* InfoPlist.strings */; };
 		2BEDD4F81557EE5400CCA5BA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEDD4F71557EE5400CCA5BA /* main.m */; };
 		2BEDD4FC1557EE5400CCA5BA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEDD4FB1557EE5400CCA5BA /* AppDelegate.m */; };
-		2BEDD5081557EF3300CCA5BA /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BEDD5071557EF3300CCA5BA /* Default@2x.png */; };
 		2BEDD50C1557F04600CCA5BA /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEDD50A1557F04600CCA5BA /* FirstViewController.m */; };
 		2BEDD50D1557F04600CCA5BA /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BEDD50B1557F04600CCA5BA /* FirstViewController.xib */; };
 		BFF1A3641558F71600774FC6 /* Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF1A3631558F71600774FC6 /* Cell.m */; };
@@ -27,6 +41,21 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2BC99ABB15595E6900F928A2 /* gamebg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gamebg.png; sourceTree = "<group>"; };
+		2BC99ABC15595E6900F928A2 /* numgroup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = numgroup.png; sourceTree = "<group>"; };
+		2BC99ABD15595E6900F928A2 /* selection-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "selection-button.png"; sourceTree = "<group>"; };
+		2BC99ABE15595E6900F928A2 /* square-group.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "square-group.png"; sourceTree = "<group>"; };
+		2BC99ABF15595E6900F928A2 /* submit-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "submit-button.png"; sourceTree = "<group>"; };
+		2BC99AC015595E6900F928A2 /* timebg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = timebg.png; sourceTree = "<group>"; };
+		2BC99AC815595E8500F928A2 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		2BC99ACA1559707300F928A2 /* homebg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = homebg.png; sourceTree = "<group>"; };
+		2BC99ACB1559707300F928A2 /* homebutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = homebutton.png; sourceTree = "<group>"; };
+		2BC99ACC1559707300F928A2 /* homelg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = homelg.png; sourceTree = "<group>"; };
+		2BC99ACD1559707300F928A2 /* information.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = information.png; sourceTree = "<group>"; };
+		2BC99ACE1559707300F928A2 /* levelselect-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "levelselect-button.png"; sourceTree = "<group>"; };
+		2BC99ACF1559707300F928A2 /* modeselect-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "modeselect-button.png"; sourceTree = "<group>"; };
+		2BC99AD01559707300F928A2 /* modeselect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = modeselect.png; sourceTree = "<group>"; };
+		2BC99AD11559707300F928A2 /* set.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = set.png; sourceTree = "<group>"; };
 		2BE008FA1558002D0001CC85 /* ModeSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ModeSelectViewController.h; path = ../ModeSelectViewController.h; sourceTree = "<group>"; };
 		2BE008FB1558002D0001CC85 /* ModeSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ModeSelectViewController.m; path = ../ModeSelectViewController.m; sourceTree = "<group>"; };
 		2BE008FC1558002D0001CC85 /* ModeSelectViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ModeSelectViewController.xib; path = ../ModeSelectViewController.xib; sourceTree = "<group>"; };
@@ -47,7 +76,6 @@
 		2BEDD4F91557EE5400CCA5BA /* SudoTest-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SudoTest-Prefix.pch"; sourceTree = "<group>"; };
 		2BEDD4FA1557EE5400CCA5BA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2BEDD4FB1557EE5400CCA5BA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		2BEDD5071557EF3300CCA5BA /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Default@2x.png"; sourceTree = "<group>"; };
 		2BEDD5091557F04600CCA5BA /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
 		2BEDD50A1557F04600CCA5BA /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 		2BEDD50B1557F04600CCA5BA /* FirstViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstViewController.xib; sourceTree = "<group>"; };
@@ -137,8 +165,22 @@
 		2BEDD5021557EE7C00CCA5BA /* Pictures */ = {
 			isa = PBXGroup;
 			children = (
+				2BC99ACA1559707300F928A2 /* homebg.png */,
+				2BC99ACB1559707300F928A2 /* homebutton.png */,
+				2BC99ACC1559707300F928A2 /* homelg.png */,
+				2BC99ACD1559707300F928A2 /* information.png */,
+				2BC99ACE1559707300F928A2 /* levelselect-button.png */,
+				2BC99ACF1559707300F928A2 /* modeselect-button.png */,
+				2BC99AD01559707300F928A2 /* modeselect.png */,
+				2BC99AD11559707300F928A2 /* set.png */,
+				2BC99ABB15595E6900F928A2 /* gamebg.png */,
+				2BC99ABC15595E6900F928A2 /* numgroup.png */,
+				2BC99ABD15595E6900F928A2 /* selection-button.png */,
+				2BC99ABE15595E6900F928A2 /* square-group.png */,
+				2BC99ABF15595E6900F928A2 /* submit-button.png */,
+				2BC99AC015595E6900F928A2 /* timebg.png */,
 				BFF1A3661558FB2E00774FC6 /* Icon.png */,
-				2BEDD5071557EF3300CCA5BA /* Default@2x.png */,
+				2BC99AC815595E8500F928A2 /* Default@2x.png */,
 			);
 			name = Pictures;
 			path = SudoTest;
@@ -195,12 +237,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				2BEDD4F61557EE5400CCA5BA /* InfoPlist.strings in Resources */,
-				2BEDD5081557EF3300CCA5BA /* Default@2x.png in Resources */,
 				2BEDD50D1557F04600CCA5BA /* FirstViewController.xib in Resources */,
 				2BE008FE1558002D0001CC85 /* ModeSelectViewController.xib in Resources */,
 				2BE0091015581C580001CC85 /* RankViewController.xib in Resources */,
 				2BE0091515581CDB0001CC85 /* GameViewController.xib in Resources */,
 				BFF1A3671558FB2E00774FC6 /* Icon.png in Resources */,
+				2BC99AC115595E6900F928A2 /* gamebg.png in Resources */,
+				2BC99AC215595E6900F928A2 /* numgroup.png in Resources */,
+				2BC99AC315595E6900F928A2 /* selection-button.png in Resources */,
+				2BC99AC415595E6900F928A2 /* square-group.png in Resources */,
+				2BC99AC515595E6900F928A2 /* submit-button.png in Resources */,
+				2BC99AC615595E6900F928A2 /* timebg.png in Resources */,
+				2BC99AC915595E8500F928A2 /* Default@2x.png in Resources */,
+				2BC99AD21559707300F928A2 /* homebg.png in Resources */,
+				2BC99AD31559707300F928A2 /* homebutton.png in Resources */,
+				2BC99AD41559707300F928A2 /* homelg.png in Resources */,
+				2BC99AD51559707300F928A2 /* information.png in Resources */,
+				2BC99AD61559707300F928A2 /* levelselect-button.png in Resources */,
+				2BC99AD71559707300F928A2 /* modeselect-button.png in Resources */,
+				2BC99AD81559707300F928A2 /* modeselect.png in Resources */,
+				2BC99AD91559707300F928A2 /* set.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,6 +296,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: sui changming (3LS36545CS)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -255,6 +312,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				PROVISIONING_PROFILE = "586E02E9-45E6-46BD-8754-7E1DCF9D1A10";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -264,6 +322,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: sui changming (3LS36545CS)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -273,6 +332,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "586E02E9-45E6-46BD-8754-7E1DCF9D1A10";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -281,10 +341,12 @@
 		2BEDD5001557EE5400CCA5BA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: sui changming (3LS36545CS)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SudoTest/SudoTest-Prefix.pch";
 				INFOPLIST_FILE = "SudoTest/SudoTest-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "586E02E9-45E6-46BD-8754-7E1DCF9D1A10";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -292,10 +354,12 @@
 		2BEDD5011557EE5400CCA5BA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: sui changming (3LS36545CS)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SudoTest/SudoTest-Prefix.pch";
 				INFOPLIST_FILE = "SudoTest/SudoTest-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "586E02E9-45E6-46BD-8754-7E1DCF9D1A10";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

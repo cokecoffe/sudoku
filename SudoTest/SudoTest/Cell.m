@@ -29,7 +29,8 @@
         userValue = 0;
         validList = [NSMutableArray array];
         
-        [self setImage:[UIImage imageNamed:@"Icon.png"] forStates:UIControlStateNormal];
+        //按钮的背景图
+        //[self setImage:[UIImage imageNamed:@"Icon.png"] forStates:UIControlStateNormal];
         
         [self setTitle:@"数字" forState:UIControlStateNormal];
         self.adjustsImageWhenHighlighted = YES;

@@ -39,9 +39,12 @@
             for (int j=0; j<9; j++) 
             {
                 //在此构造每一个矩阵，根据难度设置不同个数的空格
-                cells[i][j] = [[Cell alloc]initWithFrame:CGRectMake(20+i*30,50+j*30,30,30)];
+                cells[i][j] = [[Cell alloc]initWithFrame:CGRectMake(20+CELLWIDTH*i,20+j*CELLWIDTH,CELLWIDTH,CELLWIDTH)];
                 cells[i][j].x = i;
                 cells[i][j].y = j;
+                cells[i][j].value = j;
+                [cells[i][j] setTitle:[NSString stringWithFormat:@"%d",cells[i][j].value] forState: UIControlStateNormal];
+                [cells[i][j] setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
                 
                 [cells[i][j] addTarget:self action:@selector(CellButtonTouchUpInside:) forControlEvents:UIControlEventTouchUpInside];
                 [self.view addSubview:cells[i][j]];                
