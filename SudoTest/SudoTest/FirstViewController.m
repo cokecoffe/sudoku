@@ -32,6 +32,9 @@
         case MODE_PAGE:
                 [self.modeVC.view removeFromSuperview];
             break;
+        case GAME_PAGE:
+                [self.gameVC.view removeFromSuperview];
+            break;
             
         default:
             break;
@@ -71,6 +74,7 @@
 {
     GameViewController *gameController = [[GameViewController alloc]initWithNibName:@"GameViewController" 
                                                                              bundle:nil];
+    gameController.delegate = self;
     self.gameVC = gameController;
     [gameController release];
     

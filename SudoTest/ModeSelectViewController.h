@@ -16,5 +16,5 @@
 
 @property(assign) id delegate;
 
--(IBAction)returnHomePage:(id)sender;
+-(IBAction)BackToHome:(id)sender;
 @end

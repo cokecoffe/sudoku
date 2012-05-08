@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "global.h"
 
 @interface GameViewController : UIViewController
+{
+    id delegate;
+}
+@property (assign) id delegate;
 
+-(IBAction)BackToHome:(id)sender;
 @end

@@ -13,6 +13,15 @@
 @end
 
 @implementation GameViewController
+@synthesize delegate;
+
+-(IBAction)BackToHome:(id)sender
+{
+    if ([delegate respondsToSelector:@selector(returnHomePageFromIndex:)])
+    {
+        [delegate returnHomePageFromIndex:GAME_PAGE];
+    }
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

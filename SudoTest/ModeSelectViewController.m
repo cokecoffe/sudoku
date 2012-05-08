@@ -15,7 +15,7 @@
 @implementation ModeSelectViewController
 @synthesize delegate;
 
--(IBAction)returnHomePage:(id)sender
+-(IBAction)BackToHome:(id)sender
 {
     if ([delegate respondsToSelector:@selector(returnHomePageFromIndex:)])
     {
