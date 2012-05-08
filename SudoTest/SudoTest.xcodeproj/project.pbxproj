@@ -1,0 +1,317 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2BE008FD1558002D0001CC85 /* ModeSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BE008FB1558002D0001CC85 /* ModeSelectViewController.m */; };
+		2BE008FE1558002D0001CC85 /* ModeSelectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BE008FC1558002D0001CC85 /* ModeSelectViewController.xib */; };
+		2BE0090F15581C580001CC85 /* RankViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BE0090D15581C580001CC85 /* RankViewController.m */; };
+		2BE0091015581C580001CC85 /* RankViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BE0090E15581C580001CC85 /* RankViewController.xib */; };
+		2BE0091415581CDB0001CC85 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BE0091215581CDB0001CC85 /* GameViewController.m */; };
+		2BE0091515581CDB0001CC85 /* GameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BE0091315581CDB0001CC85 /* GameViewController.xib */; };
+		2BEDD4EC1557EE5400CCA5BA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BEDD4EB1557EE5400CCA5BA /* UIKit.framework */; };
+		2BEDD4EE1557EE5400CCA5BA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BEDD4ED1557EE5400CCA5BA /* Foundation.framework */; };
+		2BEDD4F01557EE5400CCA5BA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BEDD4EF1557EE5400CCA5BA /* CoreGraphics.framework */; };
+		2BEDD4F61557EE5400CCA5BA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2BEDD4F41557EE5400CCA5BA /* InfoPlist.strings */; };
+		2BEDD4F81557EE5400CCA5BA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEDD4F71557EE5400CCA5BA /* main.m */; };
+		2BEDD4FC1557EE5400CCA5BA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEDD4FB1557EE5400CCA5BA /* AppDelegate.m */; };
+		2BEDD5081557EF3300CCA5BA /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BEDD5071557EF3300CCA5BA /* Default@2x.png */; };
+		2BEDD50C1557F04600CCA5BA /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEDD50A1557F04600CCA5BA /* FirstViewController.m */; };
+		2BEDD50D1557F04600CCA5BA /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BEDD50B1557F04600CCA5BA /* FirstViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2BE008FA1558002D0001CC85 /* ModeSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ModeSelectViewController.h; path = ../ModeSelectViewController.h; sourceTree = "<group>"; };
+		2BE008FB1558002D0001CC85 /* ModeSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ModeSelectViewController.m; path = ../ModeSelectViewController.m; sourceTree = "<group>"; };
+		2BE008FC1558002D0001CC85 /* ModeSelectViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ModeSelectViewController.xib; path = ../ModeSelectViewController.xib; sourceTree = "<group>"; };
+		2BE0090C15581C580001CC85 /* RankViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RankViewController.h; sourceTree = "<group>"; };
+		2BE0090D15581C580001CC85 /* RankViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RankViewController.m; sourceTree = "<group>"; };
+		2BE0090E15581C580001CC85 /* RankViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RankViewController.xib; sourceTree = "<group>"; };
+		2BE0091115581CDB0001CC85 /* GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
+		2BE0091215581CDB0001CC85 /* GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
+		2BE0091315581CDB0001CC85 /* GameViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GameViewController.xib; sourceTree = "<group>"; };
+		2BE0091615582C430001CC85 /* global.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = global.h; sourceTree = "<group>"; };
+		2BEDD4E71557EE5400CCA5BA /* SudoTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SudoTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BEDD4EB1557EE5400CCA5BA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		2BEDD4ED1557EE5400CCA5BA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		2BEDD4EF1557EE5400CCA5BA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		2BEDD4F31557EE5400CCA5BA /* SudoTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SudoTest-Info.plist"; sourceTree = "<group>"; };
+		2BEDD4F51557EE5400CCA5BA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2BEDD4F71557EE5400CCA5BA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2BEDD4F91557EE5400CCA5BA /* SudoTest-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SudoTest-Prefix.pch"; sourceTree = "<group>"; };
+		2BEDD4FA1557EE5400CCA5BA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2BEDD4FB1557EE5400CCA5BA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2BEDD5071557EF3300CCA5BA /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Default@2x.png"; sourceTree = "<group>"; };
+		2BEDD5091557F04600CCA5BA /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		2BEDD50A1557F04600CCA5BA /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		2BEDD50B1557F04600CCA5BA /* FirstViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2BEDD4E41557EE5300CCA5BA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BEDD4EC1557EE5400CCA5BA /* UIKit.framework in Frameworks */,
+				2BEDD4EE1557EE5400CCA5BA /* Foundation.framework in Frameworks */,
+				2BEDD4F01557EE5400CCA5BA /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2BEDD4DC1557EE5300CCA5BA = {
+			isa = PBXGroup;
+			children = (
+				2BEDD5021557EE7C00CCA5BA /* Pictures */,
+				2BEDD4F11557EE5400CCA5BA /* SudoTest */,
+				2BEDD4EA1557EE5400CCA5BA /* Frameworks */,
+				2BEDD4E81557EE5400CCA5BA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2BEDD4E81557EE5400CCA5BA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2BEDD4E71557EE5400CCA5BA /* SudoTest.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2BEDD4EA1557EE5400CCA5BA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2BEDD4EB1557EE5400CCA5BA /* UIKit.framework */,
+				2BEDD4ED1557EE5400CCA5BA /* Foundation.framework */,
+				2BEDD4EF1557EE5400CCA5BA /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2BEDD4F11557EE5400CCA5BA /* SudoTest */ = {
+			isa = PBXGroup;
+			children = (
+				2BE0091615582C430001CC85 /* global.h */,
+				2BEDD4FA1557EE5400CCA5BA /* AppDelegate.h */,
+				2BEDD4FB1557EE5400CCA5BA /* AppDelegate.m */,
+				2BEDD5091557F04600CCA5BA /* FirstViewController.h */,
+				2BEDD50A1557F04600CCA5BA /* FirstViewController.m */,
+				2BEDD50B1557F04600CCA5BA /* FirstViewController.xib */,
+				2BE0090C15581C580001CC85 /* RankViewController.h */,
+				2BE0090D15581C580001CC85 /* RankViewController.m */,
+				2BE0090E15581C580001CC85 /* RankViewController.xib */,
+				2BE008FA1558002D0001CC85 /* ModeSelectViewController.h */,
+				2BE008FB1558002D0001CC85 /* ModeSelectViewController.m */,
+				2BE008FC1558002D0001CC85 /* ModeSelectViewController.xib */,
+				2BE0091115581CDB0001CC85 /* GameViewController.h */,
+				2BE0091215581CDB0001CC85 /* GameViewController.m */,
+				2BE0091315581CDB0001CC85 /* GameViewController.xib */,
+				2BEDD4F21557EE5400CCA5BA /* Supporting Files */,
+			);
+			path = SudoTest;
+			sourceTree = "<group>";
+		};
+		2BEDD4F21557EE5400CCA5BA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2BEDD4F31557EE5400CCA5BA /* SudoTest-Info.plist */,
+				2BEDD4F41557EE5400CCA5BA /* InfoPlist.strings */,
+				2BEDD4F71557EE5400CCA5BA /* main.m */,
+				2BEDD4F91557EE5400CCA5BA /* SudoTest-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2BEDD5021557EE7C00CCA5BA /* Pictures */ = {
+			isa = PBXGroup;
+			children = (
+				2BEDD5071557EF3300CCA5BA /* Default@2x.png */,
+			);
+			name = Pictures;
+			path = SudoTest;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2BEDD4E61557EE5300CCA5BA /* SudoTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2BEDD4FF1557EE5400CCA5BA /* Build configuration list for PBXNativeTarget "SudoTest" */;
+			buildPhases = (
+				2BEDD4E31557EE5300CCA5BA /* Sources */,
+				2BEDD4E41557EE5300CCA5BA /* Frameworks */,
+				2BEDD4E51557EE5300CCA5BA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SudoTest;
+			productName = SudoTest;
+			productReference = 2BEDD4E71557EE5400CCA5BA /* SudoTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2BEDD4DE1557EE5300CCA5BA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 2BEDD4E11557EE5300CCA5BA /* Build configuration list for PBXProject "SudoTest" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 2BEDD4DC1557EE5300CCA5BA;
+			productRefGroup = 2BEDD4E81557EE5400CCA5BA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2BEDD4E61557EE5300CCA5BA /* SudoTest */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2BEDD4E51557EE5300CCA5BA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BEDD4F61557EE5400CCA5BA /* InfoPlist.strings in Resources */,
+				2BEDD5081557EF3300CCA5BA /* Default@2x.png in Resources */,
+				2BEDD50D1557F04600CCA5BA /* FirstViewController.xib in Resources */,
+				2BE008FE1558002D0001CC85 /* ModeSelectViewController.xib in Resources */,
+				2BE0091015581C580001CC85 /* RankViewController.xib in Resources */,
+				2BE0091515581CDB0001CC85 /* GameViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2BEDD4E31557EE5300CCA5BA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BEDD4F81557EE5400CCA5BA /* main.m in Sources */,
+				2BEDD4FC1557EE5400CCA5BA /* AppDelegate.m in Sources */,
+				2BEDD50C1557F04600CCA5BA /* FirstViewController.m in Sources */,
+				2BE008FD1558002D0001CC85 /* ModeSelectViewController.m in Sources */,
+				2BE0090F15581C580001CC85 /* RankViewController.m in Sources */,
+				2BE0091415581CDB0001CC85 /* GameViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2BEDD4F41557EE5400CCA5BA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2BEDD4F51557EE5400CCA5BA /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2BEDD4FD1557EE5400CCA5BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		2BEDD4FE1557EE5400CCA5BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2BEDD5001557EE5400CCA5BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SudoTest/SudoTest-Prefix.pch";
+				INFOPLIST_FILE = "SudoTest/SudoTest-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		2BEDD5011557EE5400CCA5BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SudoTest/SudoTest-Prefix.pch";
+				INFOPLIST_FILE = "SudoTest/SudoTest-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2BEDD4E11557EE5300CCA5BA /* Build configuration list for PBXProject "SudoTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BEDD4FD1557EE5400CCA5BA /* Debug */,
+				2BEDD4FE1557EE5400CCA5BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2BEDD4FF1557EE5400CCA5BA /* Build configuration list for PBXNativeTarget "SudoTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BEDD5001557EE5400CCA5BA /* Debug */,
+				2BEDD5011557EE5400CCA5BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2BEDD4DE1557EE5300CCA5BA /* Project object */;
+}
