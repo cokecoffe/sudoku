@@ -22,6 +22,8 @@
 		2BEDD5081557EF3300CCA5BA /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BEDD5071557EF3300CCA5BA /* Default@2x.png */; };
 		2BEDD50C1557F04600CCA5BA /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEDD50A1557F04600CCA5BA /* FirstViewController.m */; };
 		2BEDD50D1557F04600CCA5BA /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BEDD50B1557F04600CCA5BA /* FirstViewController.xib */; };
+		BFF1A3641558F71600774FC6 /* Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF1A3631558F71600774FC6 /* Cell.m */; };
+		BFF1A3671558FB2E00774FC6 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = BFF1A3661558FB2E00774FC6 /* Icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +51,9 @@
 		2BEDD5091557F04600CCA5BA /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
 		2BEDD50A1557F04600CCA5BA /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 		2BEDD50B1557F04600CCA5BA /* FirstViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstViewController.xib; sourceTree = "<group>"; };
+		BFF1A3621558F71600774FC6 /* Cell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cell.h; sourceTree = "<group>"; };
+		BFF1A3631558F71600774FC6 /* Cell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cell.m; sourceTree = "<group>"; };
+		BFF1A3661558FB2E00774FC6 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +116,8 @@
 				2BE0091115581CDB0001CC85 /* GameViewController.h */,
 				2BE0091215581CDB0001CC85 /* GameViewController.m */,
 				2BE0091315581CDB0001CC85 /* GameViewController.xib */,
+				BFF1A3621558F71600774FC6 /* Cell.h */,
+				BFF1A3631558F71600774FC6 /* Cell.m */,
 				2BEDD4F21557EE5400CCA5BA /* Supporting Files */,
 			);
 			path = SudoTest;
@@ -130,6 +137,7 @@
 		2BEDD5021557EE7C00CCA5BA /* Pictures */ = {
 			isa = PBXGroup;
 			children = (
+				BFF1A3661558FB2E00774FC6 /* Icon.png */,
 				2BEDD5071557EF3300CCA5BA /* Default@2x.png */,
 			);
 			name = Pictures;
@@ -192,6 +200,7 @@
 				2BE008FE1558002D0001CC85 /* ModeSelectViewController.xib in Resources */,
 				2BE0091015581C580001CC85 /* RankViewController.xib in Resources */,
 				2BE0091515581CDB0001CC85 /* GameViewController.xib in Resources */,
+				BFF1A3671558FB2E00774FC6 /* Icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,6 +217,7 @@
 				2BE008FD1558002D0001CC85 /* ModeSelectViewController.m in Sources */,
 				2BE0090F15581C580001CC85 /* RankViewController.m in Sources */,
 				2BE0091415581CDB0001CC85 /* GameViewController.m in Sources */,
+				BFF1A3641558F71600774FC6 /* Cell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
