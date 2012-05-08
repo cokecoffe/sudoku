@@ -41,7 +41,6 @@
 
 -(void)dealloc
 {
-    [validList release];
     [super dealloc];
 }
 
