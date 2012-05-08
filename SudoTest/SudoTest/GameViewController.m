@@ -39,7 +39,7 @@
             for (int j=0; j<9; j++) 
             {
                 //在此构造每一个矩阵，根据难度设置不同个数的空格
-                cells[i][j] = [[Cell alloc]initWithFrame:CGRectMake(20+CELLWIDTH*i,20+j*CELLWIDTH,CELLWIDTH,CELLWIDTH)];
+                cells[i][j] = [[Cell alloc]initWithFrame:CGRectMake(21+CELLWIDTH*i,40+j*CELLWIDTH,CELLWIDTH,CELLWIDTH)];
                 cells[i][j].x = i;
                 cells[i][j].y = j;
                 cells[i][j].value = j;
