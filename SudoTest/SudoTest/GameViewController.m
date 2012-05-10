@@ -24,6 +24,7 @@
     //记录要改变的Cell的坐标
     EditX = ((Cell*)sender).x;
     EditY = ((Cell*)sender).y;
+    [cells[EditX][EditY] setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
     return;
 }
 
