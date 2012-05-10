@@ -7,6 +7,7 @@
 //
 
 #import "GameViewController.h"
+#import "AppDelegate.h"
 
 @interface GameViewController ()
 
@@ -33,7 +34,11 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+  
+        Sudoku *sudokuCreator = [[Sudoku alloc]init];//创建构造矩阵构造对象
+        [sudokuCreator createMatrix];
+    //    [sudokuCreator ShowCells];
+         
         for (int i=0;i<9; i++) 
         {
             for (int j=0; j<9; j++) 
@@ -42,7 +47,9 @@
                 cells[i][j] = [[Cell alloc]initWithFrame:CGRectMake(21+CELLWIDTH*i,40+j*CELLWIDTH,CELLWIDTH,CELLWIDTH)];
                 cells[i][j].x = i;
                 cells[i][j].y = j;
-                cells[i][j].value = j;
+                
+                cells[i][j].value = [[sudokuCreator GetCellWithX:i Y:j] value];
+                
                 [cells[i][j] setTitle:[NSString stringWithFormat:@"%d",cells[i][j].value] forState: UIControlStateNormal];
                 [cells[i][j] setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
                 
@@ -50,6 +57,8 @@
                 [self.view addSubview:cells[i][j]];                
             }
         }
+        
+        [sudokuCreator release];
 
         
     }

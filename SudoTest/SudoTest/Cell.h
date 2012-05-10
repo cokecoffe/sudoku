@@ -23,7 +23,8 @@
 @property(assign) int y;
 @property(assign) int value;
 @property(assign) int userValue;
-@property(assign) NSMutableArray *validList;
+@property(nonatomic,retain) NSMutableArray *validList;
 
+-(id)initWithX:(int)fx Y:(int)fy;
 
 @end

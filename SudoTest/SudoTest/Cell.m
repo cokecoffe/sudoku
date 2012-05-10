@@ -27,7 +27,7 @@
         y = 0;
         value = 0;
         userValue = 0;
-        validList = [NSMutableArray array];
+        //validList = [NSMutableArray array];
         
         //按钮的背景图
         //[self setImage:[UIImage imageNamed:@"Icon.png"] forStates:UIControlStateNormal];
@@ -36,6 +36,30 @@
         self.adjustsImageWhenHighlighted = YES;
     }
     return self;
+}
+
+
+-(id)initWithX:(int)fx Y:(int)fy 
+{
+    if (self = [super init]) {
+        x = fx;
+        y = fy;
+        value = 0;
+//        validList = [NSMutableArray array];
+        validList=[[NSMutableArray alloc]initWithCapacity:9];
+//        validList = [NSMutableArray arrayWithCapacity:9];
+        return  self;
+    }
+    else 
+    {
+        return nil;
+    }
+}
+
+-(void)dealloc
+{
+    [validList release];
+    [super dealloc];
 }
 
 /*

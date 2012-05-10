@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B46B042155ABDC800E349E7 /* Sudoku.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B46B041155ABDC800E349E7 /* Sudoku.m */; };
+		2B46B046155AC4EE00E349E7 /* Cell_Data.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B46B045155AC4EE00E349E7 /* Cell_Data.m */; };
 		2BC99AE915597DA300F928A2 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BC99ADA15597DA300F928A2 /* Default@2x.png */; };
 		2BC99AEA15597DA300F928A2 /* gamebg.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BC99ADB15597DA300F928A2 /* gamebg.png */; };
 		2BC99AEB15597DA300F928A2 /* homebg.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BC99ADC15597DA300F928A2 /* homebg.png */; };
@@ -40,6 +42,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2B46B040155ABDC800E349E7 /* Sudoku.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sudoku.h; sourceTree = "<group>"; };
+		2B46B041155ABDC800E349E7 /* Sudoku.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sudoku.m; sourceTree = "<group>"; };
+		2B46B044155AC4EE00E349E7 /* Cell_Data.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cell_Data.h; sourceTree = "<group>"; };
+		2B46B045155AC4EE00E349E7 /* Cell_Data.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cell_Data.m; sourceTree = "<group>"; };
 		2BC99ADA15597DA300F928A2 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "Pictures/Default@2x.png"; sourceTree = SOURCE_ROOT; };
 		2BC99ADB15597DA300F928A2 /* gamebg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = gamebg.png; path = Pictures/gamebg.png; sourceTree = SOURCE_ROOT; };
 		2BC99ADC15597DA300F928A2 /* homebg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = homebg.png; path = Pictures/homebg.png; sourceTree = SOURCE_ROOT; };
@@ -144,6 +150,10 @@
 				2BE0091315581CDB0001CC85 /* GameViewController.xib */,
 				BFF1A3621558F71600774FC6 /* Cell.h */,
 				BFF1A3631558F71600774FC6 /* Cell.m */,
+				2B46B044155AC4EE00E349E7 /* Cell_Data.h */,
+				2B46B045155AC4EE00E349E7 /* Cell_Data.m */,
+				2B46B040155ABDC800E349E7 /* Sudoku.h */,
+				2B46B041155ABDC800E349E7 /* Sudoku.m */,
 				2BEDD4F21557EE5400CCA5BA /* Supporting Files */,
 			);
 			path = SudoTest;
@@ -270,6 +280,8 @@
 				2BE0090F15581C580001CC85 /* RankViewController.m in Sources */,
 				2BE0091415581CDB0001CC85 /* GameViewController.m in Sources */,
 				BFF1A3641558F71600774FC6 /* Cell.m in Sources */,
+				2B46B042155ABDC800E349E7 /* Sudoku.m in Sources */,
+				2B46B046155AC4EE00E349E7 /* Cell_Data.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,7 +320,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
-				PROVISIONING_PROFILE = "586E02E9-45E6-46BD-8754-7E1DCF9D1A10";
+				PROVISIONING_PROFILE = "5B2F3E17-BD36-4335-888A-8BABCD38E794";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -328,7 +340,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				PROVISIONING_PROFILE = "586E02E9-45E6-46BD-8754-7E1DCF9D1A10";
+				PROVISIONING_PROFILE = "5B2F3E17-BD36-4335-888A-8BABCD38E794";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -342,7 +354,7 @@
 				GCC_PREFIX_HEADER = "SudoTest/SudoTest-Prefix.pch";
 				INFOPLIST_FILE = "SudoTest/SudoTest-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "586E02E9-45E6-46BD-8754-7E1DCF9D1A10";
+				PROVISIONING_PROFILE = "5B2F3E17-BD36-4335-888A-8BABCD38E794";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -355,7 +367,7 @@
 				GCC_PREFIX_HEADER = "SudoTest/SudoTest-Prefix.pch";
 				INFOPLIST_FILE = "SudoTest/SudoTest-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "586E02E9-45E6-46BD-8754-7E1DCF9D1A10";
+				PROVISIONING_PROFILE = "5B2F3E17-BD36-4335-888A-8BABCD38E794";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

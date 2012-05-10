@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "FirstViewController.h"
 
+
 @implementation AppDelegate
 
 @synthesize window = _window;
@@ -30,6 +31,7 @@
     [self.window addSubview:firstVC.view];
        
     [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
