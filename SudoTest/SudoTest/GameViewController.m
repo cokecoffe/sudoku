@@ -15,11 +15,26 @@
 
 @implementation GameViewController
 @synthesize delegate;
+@synthesize EditX;
+@synthesize EditY;
 
 -(void)CellButtonTouchUpInside:(id)sender
 {
     NSLog(@"Button Pressed %d,%d",((Cell*)sender).x,((Cell*)sender).y);
+    //记录要改变的Cell的坐标
+    EditX = ((Cell*)sender).x;
+    EditY = ((Cell*)sender).y;
     return;
+}
+
+-(IBAction)InputNum:(id)sender
+{
+    NSLog(@"Input%d",((UIButton *)sender).tag);
+    //讲按下的数值更新到要改变的Cell
+    cells[EditX][EditY].userValue = ((UIButton *)sender).tag;
+    [cells[EditX][EditY] setTitle:[NSString stringWithFormat:@"%d",cells[EditX][EditY].userValue] forState: UIControlStateNormal];
+    [cells[EditX][EditY] setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+    
 }
 
 -(IBAction)BackToHome:(id)sender
@@ -37,7 +52,10 @@
   
         Sudoku *sudokuCreator = [[Sudoku alloc]init];//创建构造矩阵构造对象
         [sudokuCreator createMatrix];
-    //    [sudokuCreator ShowCells];
+        
+        //挖洞
+        //...待实现
+        //
          
         for (int i=0;i<9; i++) 
         {
@@ -49,8 +67,9 @@
                 cells[i][j].y = j;
                 
                 cells[i][j].value = [[sudokuCreator GetCellWithX:i Y:j] value];
+                cells[i][j].userValue =  cells[i][j].value;
                 
-                [cells[i][j] setTitle:[NSString stringWithFormat:@"%d",cells[i][j].value] forState: UIControlStateNormal];
+                [cells[i][j] setTitle:[NSString stringWithFormat:@"%d",cells[i][j].userValue] forState: UIControlStateNormal];
                 [cells[i][j] setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
                 
                 [cells[i][j] addTarget:self action:@selector(CellButtonTouchUpInside:) forControlEvents:UIControlEventTouchUpInside];

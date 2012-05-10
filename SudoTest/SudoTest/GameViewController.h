@@ -14,10 +14,15 @@
 {    
     id delegate;
     Cell *cells[9][9];
+    int EditX;
+    int EditY;
 }
 @property (assign) id delegate;
+@property (assign) int EditX;
+@property (assign) int EditY;
 
 -(IBAction)BackToHome:(id)sender;
 
 -(void)CellButtonTouchUpInside:(id)sender;
+-(IBAction)InputNum:(id)sender;
 @end
