@@ -12,9 +12,16 @@
 @interface ModeSelectViewController : UIViewController
 {
     id delegate;
+    IBOutlet UISegmentedControl *modeSelect;
+    IBOutlet UISegmentedControl *levelSelect;
 }
 
 @property(assign) id delegate;
+@property(assign) IBOutlet UISegmentedControl *modeSelect;
+@property(assign) IBOutlet UISegmentedControl *levelSelect;
 
--(IBAction)BackToHome:(id)sender;
+//-(IBAction)BackToHome:(id)sender;
+-(IBAction)GameModeSelect:(id)sender;
+-(IBAction)GameLevelSelect:(id)sender;
+
 @end

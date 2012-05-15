@@ -10,6 +10,7 @@
 #import "ModeSelectViewController.h"
 #import "RankViewController.h"
 #import "GameViewController.h"
+#import "SoundViewController.h"
 
 @interface FirstViewController ()
 
@@ -17,9 +18,11 @@
 
 @implementation FirstViewController
 
+
 @synthesize modeVC;
 @synthesize rankVC;
 @synthesize gameVC;
+@synthesize topView;
 
 #pragma mark - ButtonAction
 
@@ -30,7 +33,7 @@
                 [self.rankVC.view removeFromSuperview];
             break;
         case MODE_PAGE:
-                [self.modeVC.view removeFromSuperview];
+               // [self.modeVC.view removeFromSuperview];
             break;
         case GAME_PAGE:
                 [self.gameVC.view removeFromSuperview];
@@ -45,6 +48,7 @@
 /*游戏模式选择*/
 -(IBAction)ModeSelect:(id)sender
 {
+    UIView *modeView = nil;
     ModeSelectViewController *modeController =
     [[ModeSelectViewController alloc]initWithNibName:@"ModeSelectViewController"                  
                                               bundle:nil];
@@ -52,8 +56,13 @@
     
     self.modeVC = modeController;
     [modeController release];
+    modeView = modeController.view;
     
-    [self.view addSubview:self.modeVC.view];
+    modeView.frame = CGRectMake(57, 137, modeView.bounds.size.width, modeView.bounds.size.height);
+    
+    [self addBlocker];
+    [self.view addSubview:modeView];
+ 
     
 }
 /*游戏排行*/
@@ -81,6 +90,33 @@
     [self.view addSubview:self.gameVC.view];
     
 }
+/*声音设置*/
+- (IBAction)SoundSetting:(id)sender
+{
+    UIView *soundView;
+    SoundViewController *soundController = [[SoundViewController alloc]initWithNibName:@"SoundViewController" bundle:nil];
+    
+    soundView = soundController.view;
+    topView = soundView;
+    soundView.frame = CGRectMake(10, 250, soundView.bounds.size.width, soundView.bounds.size.height);
+    [self addBlocker];
+    [self.view addSubview:soundView];
+    
+}
+- (void)closeTopView {
+    [self.modeVC.view removeFromSuperview];
+    [self.topView removeFromSuperview];
+    [blocker removeFromSuperview];
+}
+
+- (void)addBlocker {
+    blocker = [[UIButton alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 320.0f, 480.0f)];
+    [blocker addTarget:self action:@selector(closeTopView) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:blocker];
+    
+    [blocker release];
+}
+
 
 #pragma mark -
 
@@ -101,6 +137,7 @@
 
 - (void)viewDidUnload
 {
+
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -113,4 +150,8 @@
 
 
 
+- (void)dealloc {
+    
+    [super dealloc];
+}
 @end
