@@ -12,6 +12,8 @@
 		2B04E3F41562A14F00237698 /* home-but.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B04E3F31562A14F00237698 /* home-but.png */; };
 		2B04E3F61562A1E200237698 /* achivementbg.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B04E3F51562A1E200237698 /* achivementbg.png */; };
 		2B04E3F81562A26300237698 /* achiveback.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B04E3F71562A26300237698 /* achiveback.png */; };
+		2B04E3FA1563684F00237698 /* square.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B04E3F91563684F00237698 /* square.png */; };
+		2B04E3FC156381DE00237698 /* input-square.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B04E3FB156381DE00237698 /* input-square.png */; };
 		2B303F9515614D4E00FFC510 /* global.c in Sources */ = {isa = PBXBuildFile; fileRef = 2B303F9415614D4E00FFC510 /* global.c */; };
 		2B303F991562026500FFC510 /* SoundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B303F971562026500FFC510 /* SoundViewController.m */; };
 		2B303F9A1562026500FFC510 /* SoundViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B303F981562026500FFC510 /* SoundViewController.xib */; };
@@ -57,6 +59,8 @@
 		2B04E3F31562A14F00237698 /* home-but.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "home-but.png"; path = "Pictures/home-but.png"; sourceTree = SOURCE_ROOT; };
 		2B04E3F51562A1E200237698 /* achivementbg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = achivementbg.png; path = Pictures/achivementbg.png; sourceTree = SOURCE_ROOT; };
 		2B04E3F71562A26300237698 /* achiveback.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = achiveback.png; path = Pictures/achiveback.png; sourceTree = SOURCE_ROOT; };
+		2B04E3F91563684F00237698 /* square.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = square.png; path = Pictures/square.png; sourceTree = SOURCE_ROOT; };
+		2B04E3FB156381DE00237698 /* input-square.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "input-square.png"; path = "Pictures/input-square.png"; sourceTree = SOURCE_ROOT; };
 		2B303F9415614D4E00FFC510 /* global.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = global.c; sourceTree = "<group>"; };
 		2B303F961562026500FFC510 /* SoundViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundViewController.h; sourceTree = "<group>"; };
 		2B303F971562026500FFC510 /* SoundViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoundViewController.m; sourceTree = "<group>"; };
@@ -205,10 +209,12 @@
 				2B04E3F11562A06300237698 /* home-logo.png */,
 				2B303FA1156260C800FFC510 /* game.png */,
 				2B303FA5156261B400FFC510 /* submit.png */,
+				2B04E3FB156381DE00237698 /* input-square.png */,
 				2B04E3F31562A14F00237698 /* home-but.png */,
 				2B04E3F51562A1E200237698 /* achivementbg.png */,
 				2BC99ADD15597DA300F928A2 /* homebutton.png */,
 				2B04E3EF1562A01900237698 /* FirstPageBG.png */,
+				2B04E3F91563684F00237698 /* square.png */,
 				2BC99ADF15597DA300F928A2 /* information.png */,
 				2B04E3F71562A26300237698 /* achiveback.png */,
 				2BC99AE015597DA300F928A2 /* levelselect-button.png */,
@@ -303,6 +309,8 @@
 				2B04E3F41562A14F00237698 /* home-but.png in Resources */,
 				2B04E3F61562A1E200237698 /* achivementbg.png in Resources */,
 				2B04E3F81562A26300237698 /* achiveback.png in Resources */,
+				2B04E3FA1563684F00237698 /* square.png in Resources */,
+				2B04E3FC156381DE00237698 /* input-square.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

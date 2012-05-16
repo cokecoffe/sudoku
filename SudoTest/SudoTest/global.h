@@ -39,7 +39,7 @@ extern float gsoundVolume;
 extern float gmusicVolume;
 
 #define SQUAREWIDTH 279 //九宫图的宽高
-#define CELLWIDTH (SQUAREWIDTH/9)//每个小格子的宽高
+#define CELLWIDTH 34//每个小格子的宽高
 
 
 #endif
