@@ -22,7 +22,7 @@
 @property (assign,readwrite)int y;
 @property (assign,readwrite)int value;
 @property (assign,readwrite)BOOL isBlank;
-@property (retain,readwrite)NSMutableArray *validList;
+@property (assign,readwrite)NSMutableArray *validList;
 
 -(id)initWithX:(int)fx Y:(int)fy;
 

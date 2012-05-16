@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Cell.h"
+#import "Sudoku.h"
 #import "global.h"
 
 @interface GameViewController : UIViewController
@@ -16,11 +17,13 @@
     Cell *cells[9][9];
     int EditX;
     int EditY;
+    Sudoku *sudokuCreator;
 }
 
 @property (assign) id delegate;
 @property (assign) int EditX;
 @property (assign) int EditY;
+@property (retain,nonatomic) Sudoku *sudokuCreator;
 
 -(IBAction)BackToHome:(id)sender;
 - (IBAction)CommitAnswer:(id)sender;

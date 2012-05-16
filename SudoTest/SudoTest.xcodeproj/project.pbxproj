@@ -127,6 +127,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B04E3FD156404AE00237698 /* SudokuCreator */ = {
+			isa = PBXGroup;
+			children = (
+				2B46B044155AC4EE00E349E7 /* Cell_Data.h */,
+				2B46B045155AC4EE00E349E7 /* Cell_Data.m */,
+				2B46B040155ABDC800E349E7 /* Sudoku.h */,
+				2B46B041155ABDC800E349E7 /* Sudoku.m */,
+			);
+			name = SudokuCreator;
+			sourceTree = "<group>";
+		};
 		2BEDD4DC1557EE5300CCA5BA = {
 			isa = PBXGroup;
 			children = (
@@ -179,10 +190,7 @@
 				2BE0091315581CDB0001CC85 /* GameViewController.xib */,
 				BFF1A3621558F71600774FC6 /* Cell.h */,
 				BFF1A3631558F71600774FC6 /* Cell.m */,
-				2B46B044155AC4EE00E349E7 /* Cell_Data.h */,
-				2B46B045155AC4EE00E349E7 /* Cell_Data.m */,
-				2B46B040155ABDC800E349E7 /* Sudoku.h */,
-				2B46B041155ABDC800E349E7 /* Sudoku.m */,
+				2B04E3FD156404AE00237698 /* SudokuCreator */,
 				2BEDD4F21557EE5400CCA5BA /* Supporting Files */,
 			);
 			path = SudoTest;

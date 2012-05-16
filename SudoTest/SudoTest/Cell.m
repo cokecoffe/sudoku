@@ -15,7 +15,7 @@
 @synthesize y;
 @synthesize value;
 @synthesize userValue;
-@synthesize validList;
+@synthesize v_validList;
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -45,9 +45,7 @@
         x = fx;
         y = fy;
         value = 0;
-//        validList = [NSMutableArray array];
-        validList=[[NSMutableArray alloc]initWithCapacity:9];
-//        validList = [NSMutableArray arrayWithCapacity:9];
+       // v_validList = [NSMutableArray arrayWithCapacity:9];
         return  self;
     }
     else 
@@ -58,7 +56,6 @@
 
 -(void)dealloc
 {
-    [validList release];
     [super dealloc];
 }
 

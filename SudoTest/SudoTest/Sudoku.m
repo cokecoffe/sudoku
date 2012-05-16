@@ -90,44 +90,60 @@
 }
 
 /*构造可取值列表*/
--(void)InitValidlistforCell:(Cell_Data*)cell
+-(void)InitValidlistforCellX:(int)x Y:(int)y;
 {
     for(int i = 1;i <= 9;i++)
     {
-        if([self IsXYvalidWithCell:cell N:i])
+        if([self IsXYvalidWithCell:cells[x][y] N:i])
         {   
-            [cell.validList addObject:[NSNumber numberWithInt:i]];
+            [cells[x][y].validList addObject:[NSNumber numberWithInt:i]];
         }
     }
 }
 
 // 用经典的深度搜索来生成一个可行解
--(void)FillCell:(Cell_Data*)cell
+-(int)FillCellX:(int)x Y:(int)y
 {
-    if([cell.validList count] != 0)//若取值列表有值则随机选取一个并从取值列表中删除
+    
+    if([cells[x][y].validList count] != 0)//若取值列表有值则随机选取一个并从取值列表中删除
     {   
-        int size = [cell.validList count];
+        int size = [cells[x][y].validList count];
         srand((unsigned)time(NULL));
         int n = rand()%size;
         
-        cell.value = [[cell.validList objectAtIndex:n]intValue];
-        [cell.validList removeObjectAtIndex:n];
+        cells[x][y].value = [[cells[x][y].validList objectAtIndex:n]intValue];
+        [cells[x][y].validList removeObjectAtIndex:n];
+        
+        NSLog(@"x:%d y:%d,v = %d",x,y,cells[x][y].value);
     }
     else//若无值可取，那么它之前的Cell要重新再填一个，尝试，然后继续填充自己
     {
-        if(cell.y != 0)
+        if (x==0 && y==0)//递归到最终00也没得出矩阵！ 
         {
-            [self FillCell:cells[cell.x][cell.y-1]];
+            return -1;
+        }
+        
+        if(y != 0)
+        {
+            if (-1 == [self FillCellX:x Y:y-1]) {
+                return -1;
+            }
         }
         else 
         {
-            [self FillCell:cells[cell.x-1][8]];
+            if (-1 == [self FillCellX:x-1 Y:8]) {
+                return -1;
+            }
         }
         
-        [self InitValidlistforCell:cell];
+        [self InitValidlistforCellX:x Y:y];
         
-        [self FillCell:cell];
+        if (-1 == [self FillCellX:x Y:y]) {
+            return -1;
+        }
+
     }
+    return  0;
 }
 
 /*构造数独矩阵*/
@@ -137,9 +153,13 @@
     {
         for (int j = 0;j < 9;j++)
         {
-            [self InitValidlistforCell:cells[i][j]];//为每个Cell构造可取值的列表
+            [self InitValidlistforCellX:i Y:j];//为每个Cell构造可取值的列表
             
-            [self FillCell:cells[i][j]];//从可取值列表中取值填入Cell
+            if (-1 == [self FillCellX:i Y:j]) //从可取值列表中取值填入Cell
+            {
+                NSLog(@"填充失败");
+                return;
+            }
         }
     }
 }

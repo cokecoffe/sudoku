@@ -17,6 +17,7 @@
 @synthesize delegate;
 @synthesize EditX;
 @synthesize EditY;
+@synthesize sudokuCreator;
 
  //记录要改变的Cell的坐标
 -(void)CellButtonTouchUpInside:(id)sender
@@ -48,10 +49,39 @@
 
 -(IBAction)BackToHome:(id)sender
 {
+    sudokuCreator = [[Sudoku alloc]init];//创建构造矩阵构造对象
+    [sudokuCreator createMatrix];
+    [sudokuCreator FillBlankInMatrixWithLevel:gGameLevel];
+    
+    for (int i=0;i<9; i++) 
+    {
+        for (int j=0; j<9; j++) 
+        {
+            cells[i][j].x = i;
+            cells[i][j].y = j;
+            cells[i][j].value = [sudokuCreator GetCellWithX:i Y:j];
+            
+            if ([sudokuCreator isBlankCellWithX:i Y:j] == NO) //显示数字的
+            {                    
+                cells[i][j].userValue =  cells[i][j].value;
+                [cells[i][j] setTitle:[NSString stringWithFormat:@"%d",cells[i][j].userValue] forState: UIControlStateNormal];
+                [cells[i][j]setBackgroundColor:[UIColor colorWithRed:(float)(211.0/255.0) green:(float)(211.0/255.0) blue:(float)(211.0/255.0) alpha:1.0]];
+            }else {
+                [cells[i][j] setTitle:nil forState: UIControlStateNormal];
+                [cells[i][j] setBackgroundColor:[UIColor clearColor]];
+            }
+
+        }
+    }
+    
+    [sudokuCreator release];
+
+   /*     
     if ([delegate respondsToSelector:@selector(returnHomePageFromIndex:)])
     {
         [delegate returnHomePageFromIndex:GAME_PAGE];
     }
+    */
 }
 
 -(void)showAlert:(NSString *)message
@@ -95,12 +125,10 @@
     // Do any additional setup after loading the view from its nib.
     EditX = -1;
     EditY = -1;
-    Sudoku *sudokuCreator = [[Sudoku alloc]init];//创建构造矩阵构造对象
+    sudokuCreator = [[Sudoku alloc]init];//创建构造矩阵构造对象
     [sudokuCreator createMatrix];
     [sudokuCreator FillBlankInMatrixWithLevel:gGameLevel];
-    //  [sudokuCreator ShowCells];
-    
-    
+   
     for (int i=0;i<9; i++) 
     {
         for (int j=0; j<9; j++) 
@@ -124,21 +152,22 @@
             
             [cells[i][j] addTarget:self action:@selector(CellButtonTouchUpInside:) forControlEvents:UIControlEventTouchUpInside];
             [self.view addSubview:cells[i][j]];       
-            
-            [cells[i][j] release];
+
         }
     }
     
     [sudokuCreator release];
-
+    
 }
 
 - (void)viewDidUnload
 {
     [super viewDidUnload];
+    //[sudokuCreator release];
     for (int i=0; i<9; i++) {
         for (int j=0; j<9; j++) {
             [cells[i][j] release];
+            cells[i][j] = nil;
         }
     }
     // Release any retained subviews of the main view.

@@ -15,7 +15,7 @@
     int y;
     int value;//最终要验证的值
     int userValue;//用户输入的值
-    NSMutableArray *validList;
+    NSMutableArray *v_validList;
 }
 
 @property(assign) BOOL isBlank;
@@ -23,7 +23,7 @@
 @property(assign) int y;
 @property(assign) int value;
 @property(assign) int userValue;
-@property(nonatomic,retain) NSMutableArray *validList;
+@property(nonatomic,retain) NSMutableArray *v_validList;
 
 -(id)initWithX:(int)fx Y:(int)fy;
 
