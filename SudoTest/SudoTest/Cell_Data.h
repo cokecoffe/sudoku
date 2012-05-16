@@ -14,13 +14,15 @@
     int x;
     int y;
     int value;
+    BOOL isBlank;
     NSMutableArray *validList;
 }
 
 @property (assign,readwrite)int x;
 @property (assign,readwrite)int y;
 @property (assign,readwrite)int value;
-@property (assign,readwrite)NSMutableArray *validList;
+@property (assign,readwrite)BOOL isBlank;
+@property (retain,readwrite)NSMutableArray *validList;
 
 -(id)initWithX:(int)fx Y:(int)fy;
 

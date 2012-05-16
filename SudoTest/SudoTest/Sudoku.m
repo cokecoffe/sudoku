@@ -42,10 +42,14 @@
     
     [super dealloc];
 }
-
--(Cell_Data*)GetCellWithX:(int)x Y:(int)y
+-(BOOL)isBlankCellWithX:(int)x Y:(int)y
 {
-    return cells[x][y];
+    return cells[x][y].isBlank;
+}
+
+-(int)GetCellWithX:(int)x Y:(int)y
+{
+    return cells[x][y].value;
 }
 
 /*从1-9中验证值是否可取*/
@@ -91,8 +95,8 @@
     for(int i = 1;i <= 9;i++)
     {
         if([self IsXYvalidWithCell:cell N:i])
-        {
-            [cell.validList addObject:[NSNumber numberWithInt:i]]; 
+        {   
+            [cell.validList addObject:[NSNumber numberWithInt:i]];
         }
     }
 }
@@ -100,7 +104,7 @@
 // 用经典的深度搜索来生成一个可行解
 -(void)FillCell:(Cell_Data*)cell
 {
-    if([cell.validList count] != 0)//若取值列表有值则随即选取一个并从取值列表中删除
+    if([cell.validList count] != 0)//若取值列表有值则随机选取一个并从取值列表中删除
     {   
         int size = [cell.validList count];
         srand((unsigned)time(NULL));
@@ -140,13 +144,64 @@
     }
 }
 
+
+/*根据难度设置不同的空*/
+-(void)FillBlankInMatrixWithLevel:(int)level
+{
+    int i=0;
+    int j=0;
+    int nLoop = 0;
+    int blankCount = 0;
+    int subCount=0;
+ 
+    switch (level)
+    {
+        case 0:
+            blankCount = 2;           
+            break;
+        case 1:
+            blankCount = 4;           
+            break;
+        case 2:
+            blankCount = 6;            
+            break;
+        default:
+            blankCount = 3;
+            break;
+    }
+    
+    for(nLoop=0;nLoop<9; nLoop++)//为每个宫挖去blankCount个洞，共blankCount*9个 
+    {
+        subCount = 0;
+        while (subCount < blankCount) 
+        {
+            srand((unsigned)time(NULL)+nLoop);
+            do {
+                i = 3*(nLoop%3)+rand()%3;
+                j = 3*(nLoop/3)+rand()%3;
+            } while (cells[i][j].isBlank == YES);
+            
+            subCount++;
+            cells[i][j].isBlank = YES;
+        }
+    } 
+    
+}
+
 -(void)ShowCells
 {
     for (int i=0; i<9; i++) 
     {
         for (int j=0; j<9; j++) 
         {
-            NSLog(@"%@",cells[i][j]);
+            if (cells[i][j].isBlank == NO) 
+            {
+                NSLog(@"%@",cells[i][j]);
+            }
+            else {
+                NSLog(@"0");
+            }
+
         }
         NSLog(@"\n");
     }

@@ -15,6 +15,7 @@
 @synthesize x;
 @synthesize y;
 @synthesize value;
+@synthesize isBlank;
 @synthesize validList;
 
 
@@ -24,7 +25,9 @@
         x = fx;
         y = fy;
         value = 0;
-        validList = [NSMutableArray array];
+        isBlank = NO;
+        validList = [NSMutableArray arrayWithCapacity:9];
+        
         return  self;
     }
     else 

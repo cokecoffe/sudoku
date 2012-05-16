@@ -20,12 +20,15 @@
 
 -(void)CellButtonTouchUpInside:(id)sender
 {
-    NSLog(@"Button Pressed %d,%d",((Cell*)sender).x,((Cell*)sender).y);
     //记录要改变的Cell的坐标
-    EditX = ((Cell*)sender).x;
-    EditY = ((Cell*)sender).y;
-    [cells[EditX][EditY] setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
-    return;
+    if ([(Cell*)sender isBlank] == YES) {
+        NSLog(@"Button Pressed %d,%d",((Cell*)sender).x,((Cell*)sender).y);
+        EditX = ((Cell*)sender).x;
+        EditY = ((Cell*)sender).y;
+        [cells[EditX][EditY] setBackgroundColor:[UIColor blueColor]];
+        [cells[EditX][EditY] setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+        return;
+    }    
 }
 
 -(IBAction)InputNum:(id)sender
@@ -34,7 +37,7 @@
     //讲按下的数值更新到要改变的Cell
     cells[EditX][EditY].userValue = ((UIButton *)sender).tag;
     [cells[EditX][EditY] setTitle:[NSString stringWithFormat:@"%d",cells[EditX][EditY].userValue] forState: UIControlStateNormal];
-    [cells[EditX][EditY] setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+    [cells[EditX][EditY] setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
     
 }
 
@@ -46,6 +49,26 @@
     }
 }
 
+- (IBAction)CommitAnswer:(id)sender
+{
+    int i,j;
+    
+    for (i=0; i<9; i++) 
+    {
+        for (j=0; j<9; j++) 
+        {
+            if (cells[i][j].userValue!=cells[i][j].value) 
+            {
+                NSLog(@"Sorry");
+                return;
+            }
+        }
+    }
+    NSLog(@"Right!");
+}
+
+
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -53,10 +76,9 @@
   
         Sudoku *sudokuCreator = [[Sudoku alloc]init];//创建构造矩阵构造对象
         [sudokuCreator createMatrix];
-        
-        //挖洞
-        //...待实现
-        //
+        [sudokuCreator FillBlankInMatrixWithLevel:gGameLevel];
+     //  [sudokuCreator ShowCells];
+   
          
         for (int i=0;i<9; i++) 
         {
@@ -67,14 +89,22 @@
                 cells[i][j].x = i;
                 cells[i][j].y = j;
                 
-                cells[i][j].value = [[sudokuCreator GetCellWithX:i Y:j] value];
-                cells[i][j].userValue =  cells[i][j].value;
+                cells[i][j].value = [sudokuCreator GetCellWithX:i Y:j];
+               
+                if ([sudokuCreator isBlankCellWithX:i Y:j] == NO) //显示数字的
+                {                    
+                    cells[i][j].userValue =  cells[i][j].value;
+                    [cells[i][j] setTitle:[NSString stringWithFormat:@"%d",cells[i][j].userValue] forState: UIControlStateNormal];
+                    [cells[i][j]setBackgroundColor:[UIColor yellowColor]];
+                }
                 
-                [cells[i][j] setTitle:[NSString stringWithFormat:@"%d",cells[i][j].userValue] forState: UIControlStateNormal];
+                
                 [cells[i][j] setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
                 
                 [cells[i][j] addTarget:self action:@selector(CellButtonTouchUpInside:) forControlEvents:UIControlEventTouchUpInside];
-                [self.view addSubview:cells[i][j]];                
+                [self.view addSubview:cells[i][j]];       
+                
+                [cells[i][j] release];
             }
         }
         
@@ -94,6 +124,11 @@
 - (void)viewDidUnload
 {
     [super viewDidUnload];
+    for (int i=0; i<9; i++) {
+        for (int j=0; j<9; j++) {
+            [cells[i][j] release];
+        }
+    }
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
 }

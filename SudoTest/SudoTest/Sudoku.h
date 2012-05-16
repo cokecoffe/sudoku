@@ -14,12 +14,15 @@
     Cell_Data *cells[9][9];
 }
 
--(Cell_Data*)GetCellWithX:(int)x Y:(int)y;
+-(BOOL)isBlankCellWithX:(int)x Y:(int)y;
+-(int)GetCellWithX:(int)x Y:(int)y;
 -(void)FillCell:(Cell_Data*)cell;
 -(void)ShowCells;
 -(void)createMatrix;
-
+-(bool)isUniqueAnserWithValue:(int) value X:(int) x Y:(int) y;
+-(void)FillBlankInMatrixWithLevel:(int)level;
 
 -(bool)IsXYvalidWithCell:(Cell_Data *)c N:(int)n;
 -(void)InitValidlistforCell:(Cell_Data*)cell;
+
 @end
