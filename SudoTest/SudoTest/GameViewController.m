@@ -15,10 +15,15 @@
 
 @implementation GameViewController
 
+@synthesize timeLabel;
 @synthesize EditX;
 @synthesize EditY;
 @synthesize sudokuCreator;
 @synthesize panelView;
+@synthesize gameTimer;
+@synthesize LevelLabel;
+
+static int h,m;
 
 - (IBAction)ReturnToHomepage:(id)sender 
 {
@@ -59,16 +64,38 @@
     
     [panelView removeFromSuperview];
     [blocker removeFromSuperview];
+    h = 0;
+    m = 0;
+     gameTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateTimeLabel) userInfo:nil repeats:YES];
 }
 
 - (IBAction)GameOptionPanelShow:(id)sender 
 {
+    [gameTimer invalidate];
     [self addBlocker];
     [self.view addSubview:blocker];
     
     panelView.frame = CGRectMake(80,237,panelView.bounds.size.width,panelView.bounds.size.height);
     [self.view addSubview:panelView];
     
+}
+
+- (IBAction)CommitAnswer:(id)sender
+{
+    int i,j;
+    
+    for (i=0; i<9; i++) 
+    {
+        for (j=0; j<9; j++) 
+        {
+            if (cells[i][j].userValue!=cells[i][j].value) 
+            {
+                [self showAlert:@"抱歉，未做对"];
+                return;
+            }
+        }
+    }
+    [self showAlert:@"完全正确"];
 }
 
  //记录要改变的Cell的坐标
@@ -105,25 +132,24 @@
     [av show];
 }
 
-- (IBAction)CommitAnswer:(id)sender
-{
-    int i,j;
-    
-    for (i=0; i<9; i++) 
-    {
-        for (j=0; j<9; j++) 
-        {
-            if (cells[i][j].userValue!=cells[i][j].value) 
-            {
-                [self showAlert:@"抱歉，未做对"];
-                return;
-            }
-        }
+
+
+-(void)updateTimeLabel
+{    
+    [timeLabel setText:[NSString stringWithFormat:@"%d:%d",h,m]];
+    m++;
+    if (m == 60) {
+        h++;
+        m = 0;
     }
-    [self showAlert:@"完全正确"];
 }
 
-
+- (IBAction)ResumeGame:(id)sender 
+{
+    gameTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateTimeLabel) userInfo:nil repeats:YES];
+    [panelView removeFromSuperview];
+    [blocker removeFromSuperview];
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -139,6 +165,20 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    switch (gGameLevel) {
+        case LEVEL_ESAY:
+            LevelLabel.text = @"难度:易";
+            break;
+        case LEVEL_MID:
+            LevelLabel.text = @"难度:中";
+            break;
+        case LEVEL_HARD:
+            LevelLabel.text = @"难度:难";
+            break;
+        default:
+            break;
+    }
+    
     EditX = -1;
     EditY = -1;
     sudokuCreator = [[Sudoku alloc]init];//创建构造矩阵构造对象
@@ -174,10 +214,14 @@
     
     [sudokuCreator release];
     
+    gameTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateTimeLabel) userInfo:nil repeats:YES];
+    
 }
 
 - (void)viewDidUnload
 {
+    [self setTimeLabel:nil];
+    [self setLevelLabel:nil];
     [super viewDidUnload];
     //[sudokuCreator release];
     for (int i=0; i<9; i++) {
@@ -195,7 +239,13 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+- (void)dealloc {
+    [timeLabel release];
+    [LevelLabel release];
+    [super dealloc];
+}
 - (void)closeTopView {
+    gameTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateTimeLabel) userInfo:nil repeats:YES];
     [panelView removeFromSuperview];
     [blocker removeFromSuperview];
 }
@@ -207,5 +257,4 @@
     
     [blocker release];
 }
-
 @end

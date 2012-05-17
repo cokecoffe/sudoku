@@ -19,16 +19,19 @@
     Sudoku *sudokuCreator;
     UIView *panelView;
     UIButton *blocker;
+    NSTimer *gameTimer;
 }
 
+@property (retain, nonatomic) IBOutlet UILabel *timeLabel;
 @property (assign) int EditX;
 @property (assign) int EditY;
 @property (retain,nonatomic) Sudoku *sudokuCreator;
 @property (retain,nonatomic) IBOutlet UIView *panelView;
-
-- (IBAction)CommitAnswer:(id)sender;
-
+@property (retain,nonatomic) NSTimer *gameTimer;
+@property (retain, nonatomic) IBOutlet UILabel *LevelLabel;
 
 -(void)CellButtonTouchUpInside:(id)sender;
 -(IBAction)InputNum:(id)sender;
+- (IBAction)CommitAnswer:(id)sender;
+- (IBAction)ResumeGame:(id)sender;
 @end
