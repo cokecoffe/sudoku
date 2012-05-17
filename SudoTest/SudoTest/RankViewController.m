@@ -14,15 +14,17 @@
 @end
 
 @implementation RankViewController
-@synthesize delegate;
 
 
 -(IBAction)BackToHome:(id)sender
 {
+    
+    [self.navigationController popViewControllerAnimated:YES];
+    /*
     if ([delegate respondsToSelector:@selector(returnHomePageFromIndex:)])
     {
         [delegate returnHomePageFromIndex:RANK_PAGE];
-    }
+    }*/
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil

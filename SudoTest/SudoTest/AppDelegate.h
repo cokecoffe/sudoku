@@ -13,10 +13,10 @@
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 {
-    FirstViewController *firstVC;
+    UINavigationController *g_navController;
 }
 
-@property (strong, nonatomic) UIWindow *window;
-@property (assign,nonatomic) FirstViewController *firstVC;
+@property (strong,nonatomic) UIWindow *window;
+@property (assign,nonatomic) UINavigationController *g_navController;
 
 @end

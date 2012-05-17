@@ -92,13 +92,18 @@
 /*构造可取值列表*/
 -(void)InitValidlistforCellX:(int)x Y:(int)y;
 {
+  //  NSLog(@"%d %d的可取列表为:",x,y);
     for(int i = 1;i <= 9;i++)
     {
         if([self IsXYvalidWithCell:cells[x][y] N:i])
         {   
+          //  printf("%d\t",i);
             [cells[x][y].validList addObject:[NSNumber numberWithInt:i]];
         }
     }
+    //printf("\n");
+    
+    
 }
 
 // 用经典的深度搜索来生成一个可行解
@@ -114,7 +119,7 @@
         cells[x][y].value = [[cells[x][y].validList objectAtIndex:n]intValue];
         [cells[x][y].validList removeObjectAtIndex:n];
         
-        NSLog(@"x:%d y:%d,v = %d",x,y,cells[x][y].value);
+        //NSLog(@"%d %d尝试填充为,v = %d",x,y,cells[x][y].value);
     }
     else//若无值可取，那么它之前的Cell要重新再填一个，尝试，然后继续填充自己
     {
@@ -122,15 +127,17 @@
         {
             return -1;
         }
-        
+        cells[x][y].value = 0;//非常关键的一步，在回填之前，先把自己的值抹掉！！！
         if(y != 0)
         {
+           // NSLog(@"没有可选值，要填它的上一个%d %d",x,y-1);
             if (-1 == [self FillCellX:x Y:y-1]) {
                 return -1;
             }
         }
         else 
         {
+           // NSLog(@"没有可选值，要填它的上一个%d %d",x-1,8);
             if (-1 == [self FillCellX:x-1 Y:8]) {
                 return -1;
             }
@@ -153,11 +160,12 @@
     {
         for (int j = 0;j < 9;j++)
         {
+           // NSLog(@"准备构造%d,%d",i,j);
             [self InitValidlistforCellX:i Y:j];//为每个Cell构造可取值的列表
-            
+           // NSLog(@"准备填充%d,%d",i,j);
             if (-1 == [self FillCellX:i Y:j]) //从可取值列表中取值填入Cell
             {
-                NSLog(@"填充失败");
+           //     NSLog(@"填充失败");
                 return;
             }
         }

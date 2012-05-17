@@ -18,94 +18,49 @@
 
 @implementation FirstViewController
 
-
-@synthesize modeVC;
-@synthesize rankVC;
-@synthesize gameVC;
 @synthesize topView;
+@synthesize modeVC;
+@synthesize soundVC;
 
 #pragma mark - ButtonAction
-
--(void)returnHomePageFromIndex:(int)pageIndex
-{
-    switch (pageIndex) {
-        case RANK_PAGE:
-                [self.rankVC.view removeFromSuperview];
-            break;
-        case MODE_PAGE:
-               // [self.modeVC.view removeFromSuperview];
-            break;
-        case GAME_PAGE:
-                [self.gameVC.view removeFromSuperview];
-            break;
-            
-        default:
-            break;
-    }
-
-}
 
 /*游戏模式选择*/
 -(IBAction)ModeSelect:(id)sender
 {
-    UIView *modeView = nil;
-    ModeSelectViewController *modeController =
-    [[ModeSelectViewController alloc]initWithNibName:@"ModeSelectViewController"                  
-                                              bundle:nil];
-    modeController.delegate = self;
-    
-    self.modeVC = modeController;
-    [modeController release];
-    modeView = modeController.view;
-    
-    modeView.frame = CGRectMake(57, 137, modeView.bounds.size.width, modeView.bounds.size.height);
-    
+    modeVC.view.frame = CGRectMake(57, 137,modeVC.view.bounds.size.width,modeVC.view.bounds.size.height);
     [self addBlocker];
-    [self.view addSubview:modeView];
- 
-    
+    [self.view addSubview:modeVC.view];    
 }
 /*游戏排行*/
 -(IBAction)RankList:(id)sender
 {
     RankViewController *rankController =  [[RankViewController alloc]initWithNibName:@"RankViewController" 
                                                                               bundle:nil];
-    rankController.delegate = self;
+ 
+    [self.navigationController pushViewController:rankController animated:YES];
     
-    self.rankVC = rankController;
     [rankController release];
-    
-    [self.view addSubview:self.rankVC.view];
-
-   }
+}
 /*游戏开始*/
 -(IBAction)StartGame:(id)sender
 {
     GameViewController *gameController = [[GameViewController alloc]initWithNibName:@"GameViewController" 
                                                                              bundle:nil];
-    gameController.delegate = self;
-    self.gameVC = gameController;
+    
+    [self.navigationController pushViewController:gameController animated:YES];
+    
     [gameController release];
-    
-    [self.view addSubview:self.gameVC.view];
-    
 }
 /*声音设置*/
 - (IBAction)SoundSetting:(id)sender
 {
-    UIView *soundView;
-    SoundViewController *soundController = [[SoundViewController alloc]initWithNibName:@"SoundViewController" bundle:nil];
-    
-    soundView = soundController.view;
-    topView = soundView;
-    soundView.frame = CGRectMake(10, 250, soundView.bounds.size.width, soundView.bounds.size.height);
+     soundVC.view.frame = CGRectMake(10, 250, soundVC.view.bounds.size.width, soundVC.view.bounds.size.height);
     [self addBlocker];
-    [self.view addSubview:soundView];
-    
+    [self.view addSubview:soundVC.view];    
 }
 - (void)closeTopView {
-    [self.modeVC.view removeFromSuperview];
-    [self.topView removeFromSuperview];
+    [modeVC.view removeFromSuperview];
+    [soundVC.view removeFromSuperview];
     [blocker removeFromSuperview];
 }
 
@@ -125,6 +80,8 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        modeVC = [[ModeSelectViewController alloc]initWithNibName:@"ModeSelectViewController" bundle:nil];
+        soundVC = [[SoundViewController alloc]initWithNibName:@"SoundViewController" bundle:nil];
     }
     return self;
 }
@@ -151,7 +108,8 @@
 
 
 - (void)dealloc {
-    
+    [modeVC release];
+    [soundVC release];
     [super dealloc];
 }
 @end

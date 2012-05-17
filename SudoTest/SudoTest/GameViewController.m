@@ -14,10 +14,62 @@
 @end
 
 @implementation GameViewController
-@synthesize delegate;
+
 @synthesize EditX;
 @synthesize EditY;
 @synthesize sudokuCreator;
+@synthesize panelView;
+
+- (IBAction)ReturnToHomepage:(id)sender 
+{
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
+
+- (IBAction)RestartGame:(id)sender
+{
+    sudokuCreator = [[Sudoku alloc]init];//创建构造矩阵构造对象
+    [sudokuCreator createMatrix];
+    [sudokuCreator FillBlankInMatrixWithLevel:gGameLevel];
+    
+    for (int i=0;i<9; i++) 
+    {
+        for (int j=0; j<9; j++) 
+        {
+            cells[i][j].x = i;
+            cells[i][j].y = j;
+            cells[i][j].value = [sudokuCreator GetCellWithX:i Y:j];
+            
+            if ([sudokuCreator isBlankCellWithX:i Y:j] == NO) //显示数字的
+            {                    
+                cells[i][j].userValue =  cells[i][j].value;
+                [cells[i][j] setTitle:[NSString stringWithFormat:@"%d",cells[i][j].userValue] forState: UIControlStateNormal];
+                [cells[i][j]setBackgroundColor:[UIColor colorWithRed:(float)(211.0/255.0) green:(float)(211.0/255.0) blue:(float)(211.0/255.0) alpha:1.0]];
+            }
+            else //待填的
+            {
+                [cells[i][j] setTitle:nil forState: UIControlStateNormal];
+                [cells[i][j] setBackgroundColor:[UIColor clearColor]];
+            }
+            [cells[i][j] setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+            
+        }
+    }
+    
+    [sudokuCreator release];
+    
+    [panelView removeFromSuperview];
+    [blocker removeFromSuperview];
+}
+
+- (IBAction)GameOptionPanelShow:(id)sender 
+{
+    [self addBlocker];
+    [self.view addSubview:blocker];
+    
+    panelView.frame = CGRectMake(80,237,panelView.bounds.size.width,panelView.bounds.size.height);
+    [self.view addSubview:panelView];
+    
+}
 
  //记录要改变的Cell的坐标
 -(void)CellButtonTouchUpInside:(id)sender
@@ -45,43 +97,6 @@
     [cells[EditX][EditY] setBackgroundColor:[UIColor clearColor]];    
     [cells[EditX][EditY] setTitleColor:[UIColor brownColor] forState:UIControlStateNormal];
     
-}
-
--(IBAction)BackToHome:(id)sender
-{
-    sudokuCreator = [[Sudoku alloc]init];//创建构造矩阵构造对象
-    [sudokuCreator createMatrix];
-    [sudokuCreator FillBlankInMatrixWithLevel:gGameLevel];
-    
-    for (int i=0;i<9; i++) 
-    {
-        for (int j=0; j<9; j++) 
-        {
-            cells[i][j].x = i;
-            cells[i][j].y = j;
-            cells[i][j].value = [sudokuCreator GetCellWithX:i Y:j];
-            
-            if ([sudokuCreator isBlankCellWithX:i Y:j] == NO) //显示数字的
-            {                    
-                cells[i][j].userValue =  cells[i][j].value;
-                [cells[i][j] setTitle:[NSString stringWithFormat:@"%d",cells[i][j].userValue] forState: UIControlStateNormal];
-                [cells[i][j]setBackgroundColor:[UIColor colorWithRed:(float)(211.0/255.0) green:(float)(211.0/255.0) blue:(float)(211.0/255.0) alpha:1.0]];
-            }else {
-                [cells[i][j] setTitle:nil forState: UIControlStateNormal];
-                [cells[i][j] setBackgroundColor:[UIColor clearColor]];
-            }
-
-        }
-    }
-    
-    [sudokuCreator release];
-
-   /*     
-    if ([delegate respondsToSelector:@selector(returnHomePageFromIndex:)])
-    {
-        [delegate returnHomePageFromIndex:GAME_PAGE];
-    }
-    */
 }
 
 -(void)showAlert:(NSString *)message
@@ -114,7 +129,8 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-
+        NSArray *array = [[NSBundle mainBundle] loadNibNamed:@"GameTopPanel" owner:self options:nil];
+        panelView = [array objectAtIndex:0];
     }
     return self;
 }
@@ -177,6 +193,19 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+- (void)closeTopView {
+    [panelView removeFromSuperview];
+    [blocker removeFromSuperview];
+}
+
+- (void)addBlocker {
+    blocker = [[UIButton alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 320.0f, 480.0f)];
+    [blocker addTarget:self action:@selector(closeTopView) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:blocker];
+    
+    [blocker release];
 }
 
 @end

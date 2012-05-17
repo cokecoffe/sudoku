@@ -13,7 +13,8 @@
 @implementation AppDelegate
 
 @synthesize window = _window;
-@synthesize firstVC;
+
+@synthesize g_navController;
 
 - (void)dealloc
 {
@@ -25,12 +26,16 @@
 {
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
-    
-    firstVC = [[FirstViewController alloc]init];
-    
-    [self.window addSubview:firstVC.view];
+    UIViewController *firstVC = [[FirstViewController alloc]init];
+
+    g_navController = [[UINavigationController alloc]initWithRootViewController:firstVC];
+    [g_navController setNavigationBarHidden:YES];
+        
+    [self.window addSubview:g_navController.view];
        
     [self.window makeKeyAndVisible];
+    
+    [firstVC release];
     
     return YES;
 }

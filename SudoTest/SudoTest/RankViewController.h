@@ -11,10 +11,8 @@
 
 @interface RankViewController : UIViewController
 {
-    id delegate;
+  
 }
-
-@property(assign) id delegate;
 
 -(IBAction)BackToHome:(id)sender;
 

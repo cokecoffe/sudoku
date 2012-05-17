@@ -13,20 +13,21 @@
 
 @interface GameViewController : UIViewController
 {    
-    id delegate;
     Cell *cells[9][9];
     int EditX;
     int EditY;
     Sudoku *sudokuCreator;
+    UIView *panelView;
+    UIButton *blocker;
 }
 
-@property (assign) id delegate;
 @property (assign) int EditX;
 @property (assign) int EditY;
 @property (retain,nonatomic) Sudoku *sudokuCreator;
+@property (retain,nonatomic) IBOutlet UIView *panelView;
 
--(IBAction)BackToHome:(id)sender;
 - (IBAction)CommitAnswer:(id)sender;
+
 
 -(void)CellButtonTouchUpInside:(id)sender;
 -(IBAction)InputNum:(id)sender;
