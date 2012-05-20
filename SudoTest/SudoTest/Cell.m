@@ -15,7 +15,11 @@
 @synthesize y;
 @synthesize value;
 @synthesize userValue;
-@synthesize v_validList;
+@synthesize noteList;
+@synthesize label1;
+@synthesize label2;
+@synthesize label3;
+@synthesize label4;
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -27,35 +31,39 @@
         y = 0;
         value = 0;
         userValue = 0;
-        //validList = [NSMutableArray array];
-        
-        //按钮的背景图
-        //[self setImage:[UIImage imageNamed:@"Icon.png"] forStates:UIControlStateNormal];
-        
+        noteList = nil;         
         [self setTitle:@"数字" forState:UIControlStateNormal];
-        self.adjustsImageWhenHighlighted = YES;
+//        noteList = [NSMutableArray arrayWithCapacity:9];
+        noteList = [[NSMutableArray alloc]initWithCapacity:9];
+        /*
+        label1 = [[UILabel alloc]initWithFrame:CGRectMake(frame.origin.x, frame.origin.y, 17, 17)];
+        label1.font = [UIFont systemFontOfSize:12];
+       // [self addSubview:label1];
+        
+        label2 = [[UILabel alloc]initWithFrame:CGRectMake(frame.origin.x+17, frame.origin.y, 17, 17)];
+        label2.font = [UIFont systemFontOfSize:12];
+        //[self addSubview:label2];
+        
+        label3 = [[UILabel alloc]initWithFrame:CGRectMake(frame.origin.x, frame.origin.y+17, 17, 17)];
+        label3.font = [UIFont systemFontOfSize:12];
+       // [self addSubview:label3];
+        
+        label4 = [[UILabel alloc]initWithFrame:CGRectMake(frame.origin.x+17, frame.origin.y+17, 17, 17)];
+        label4.font = [UIFont systemFontOfSize:12];
+       // [self addSubview:label4];
+         */
+        
     }
     return self;
 }
 
-
--(id)initWithX:(int)fx Y:(int)fy 
-{
-    if (self = [super init]) {
-        x = fx;
-        y = fy;
-        value = 0;
-       // v_validList = [NSMutableArray arrayWithCapacity:9];
-        return  self;
-    }
-    else 
-    {
-        return nil;
-    }
-}
-
 -(void)dealloc
 {
+    [label1 release];
+    [label2 release];
+    [label3 release];
+    [label4 release];
+    [noteList release];
     [super dealloc];
 }
 

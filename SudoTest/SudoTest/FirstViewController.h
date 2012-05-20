@@ -23,6 +23,7 @@
     SoundViewController *soundVC;
 }
 
+@property (retain, nonatomic) IBOutlet UIButton *SoundSetButton;
 @property(assign,nonatomic) UIView *topView;
 @property(retain,nonatomic) ModeSelectViewController *modeVC;
 @property(retain,nonatomic) SoundViewController *soundVC;

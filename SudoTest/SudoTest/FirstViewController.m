@@ -18,6 +18,7 @@
 
 @implementation FirstViewController
 
+@synthesize SoundSetButton;
 @synthesize topView;
 @synthesize modeVC;
 @synthesize soundVC;
@@ -90,11 +91,13 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    [self.SoundSetButton setBackgroundImage:[UIImage imageNamed:@"set-but.png"] forState:UIControlStateHighlighted];
 }
 
 - (void)viewDidUnload
 {
 
+    [self setSoundSetButton:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -110,6 +113,7 @@
 - (void)dealloc {
     [modeVC release];
     [soundVC release];
+    [SoundSetButton release];
     [super dealloc];
 }
 @end
