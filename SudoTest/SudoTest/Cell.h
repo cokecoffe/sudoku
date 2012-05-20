@@ -15,17 +15,9 @@
     int y;
     int value;//最终要验证的值
     int userValue;//用户输入的值
-    UILabel *label1;
-    UILabel *lable2;
-    UILabel *label3;
-    UILabel *label4;
     NSMutableArray *noteList;
 }
 
-@property(retain,nonatomic)  IBOutlet UILabel *label1;
-@property(retain,nonatomic)  IBOutlet UILabel *label2;
-@property(retain,nonatomic)  IBOutlet UILabel *label3;
-@property(retain,nonatomic)  IBOutlet UILabel *label4;
 @property(assign) BOOL isBlank;
 @property(assign) int x;
 @property(assign) int y;

@@ -198,10 +198,13 @@
             break;
     }
     
-    for(nLoop=0;nLoop<9; nLoop++)//为每个宫挖去blankCount个洞，共blankCount*9个 
+    for(nLoop=0;nLoop<9; nLoop++)//为每个宫挖去blankCount(+1)个洞，共blankCount*9个 
     {
         subCount = 0;
-        while (subCount < blankCount) 
+        
+        srand((unsigned)time(NULL)+nLoop);
+        
+        while (subCount < (blankCount+rand()%2)) 
         {
             srand((unsigned)time(NULL)+nLoop);
             do {

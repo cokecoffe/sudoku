@@ -16,10 +16,6 @@
 @synthesize value;
 @synthesize userValue;
 @synthesize noteList;
-@synthesize label1;
-@synthesize label2;
-@synthesize label3;
-@synthesize label4;
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -33,36 +29,13 @@
         userValue = 0;
         noteList = nil;         
         [self setTitle:@"数字" forState:UIControlStateNormal];
-//        noteList = [NSMutableArray arrayWithCapacity:9];
         noteList = [[NSMutableArray alloc]initWithCapacity:9];
-        /*
-        label1 = [[UILabel alloc]initWithFrame:CGRectMake(frame.origin.x, frame.origin.y, 17, 17)];
-        label1.font = [UIFont systemFontOfSize:12];
-       // [self addSubview:label1];
-        
-        label2 = [[UILabel alloc]initWithFrame:CGRectMake(frame.origin.x+17, frame.origin.y, 17, 17)];
-        label2.font = [UIFont systemFontOfSize:12];
-        //[self addSubview:label2];
-        
-        label3 = [[UILabel alloc]initWithFrame:CGRectMake(frame.origin.x, frame.origin.y+17, 17, 17)];
-        label3.font = [UIFont systemFontOfSize:12];
-       // [self addSubview:label3];
-        
-        label4 = [[UILabel alloc]initWithFrame:CGRectMake(frame.origin.x+17, frame.origin.y+17, 17, 17)];
-        label4.font = [UIFont systemFontOfSize:12];
-       // [self addSubview:label4];
-         */
-        
     }
     return self;
 }
 
 -(void)dealloc
 {
-    [label1 release];
-    [label2 release];
-    [label3 release];
-    [label4 release];
     [noteList release];
     [super dealloc];
 }

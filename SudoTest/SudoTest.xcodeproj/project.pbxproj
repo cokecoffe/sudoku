@@ -35,7 +35,6 @@
 		2BC2807A1567B4CD00BB6D01 /* input-square_ye.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BC280791567B4CD00BB6D01 /* input-square_ye.png */; };
 		2BC2807C1567B6B500BB6D01 /* gameinputselect.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BC2807B1567B6B500BB6D01 /* gameinputselect.png */; };
 		2BC2807E1567D59800BB6D01 /* gamebg.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BC2807D1567D59700BB6D01 /* gamebg.png */; };
-		2BC280801567EF1E00BB6D01 /* CellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BC2807F1567EF1E00BB6D01 /* CellView.xib */; };
 		2BC99AE915597DA300F928A2 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BC99ADA15597DA300F928A2 /* Default@2x.png */; };
 		2BC99AEE15597DA300F928A2 /* information.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BC99ADF15597DA300F928A2 /* information.png */; };
 		2BC99AEF15597DA300F928A2 /* levelselect-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BC99AE015597DA300F928A2 /* levelselect-button.png */; };
@@ -94,7 +93,6 @@
 		2BC280791567B4CD00BB6D01 /* input-square_ye.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "input-square_ye.png"; path = "Pictures/input-square_ye.png"; sourceTree = SOURCE_ROOT; };
 		2BC2807B1567B6B500BB6D01 /* gameinputselect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = gameinputselect.png; path = Pictures/gameinputselect.png; sourceTree = SOURCE_ROOT; };
 		2BC2807D1567D59700BB6D01 /* gamebg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = gamebg.png; path = Pictures/gamebg.png; sourceTree = SOURCE_ROOT; };
-		2BC2807F1567EF1E00BB6D01 /* CellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CellView.xib; sourceTree = "<group>"; };
 		2BC99ADA15597DA300F928A2 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "Pictures/Default@2x.png"; sourceTree = SOURCE_ROOT; };
 		2BC99ADF15597DA300F928A2 /* information.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = information.png; path = Pictures/information.png; sourceTree = SOURCE_ROOT; };
 		2BC99AE015597DA300F928A2 /* levelselect-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "levelselect-button.png"; path = "Pictures/levelselect-button.png"; sourceTree = SOURCE_ROOT; };
@@ -219,7 +217,6 @@
 				2B04E40E15649E2A00237698 /* GameTopPanel.xib */,
 				BFF1A3621558F71600774FC6 /* Cell.h */,
 				BFF1A3631558F71600774FC6 /* Cell.m */,
-				2BC2807F1567EF1E00BB6D01 /* CellView.xib */,
 				2B04E4201564FCF200237698 /* Database */,
 				2B04E3FD156404AE00237698 /* SudokuCreator */,
 				2BEDD4F21557EE5400CCA5BA /* Supporting Files */,
@@ -357,7 +354,6 @@
 				2BC2807A1567B4CD00BB6D01 /* input-square_ye.png in Resources */,
 				2BC2807C1567B6B500BB6D01 /* gameinputselect.png in Resources */,
 				2BC2807E1567D59800BB6D01 /* gamebg.png in Resources */,
-				2BC280801567EF1E00BB6D01 /* CellView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

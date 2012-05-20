@@ -203,7 +203,10 @@ static int h,m;
 
 -(void)showAlert:(NSString *)message
 {
-    UIAlertView *av = [[[UIAlertView alloc]initWithTitle:@"结果" message:message delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil]autorelease];
+    UIAlertView *av = [[[UIAlertView alloc]initWithTitle:@"结果" message:message
+                                                delegate:nil 
+                                       cancelButtonTitle:@"返回"
+                                       otherButtonTitles:@"玩下一局", nil]autorelease];
     [av show];
 }
 
@@ -211,7 +214,32 @@ static int h,m;
 
 -(void)updateTimeLabel
 {    
-    [timeLabel setText:[NSString stringWithFormat:@"%d:%d",h,m]];
+    NSMutableString *hourstr,*minstr;
+    
+    if (h<10) 
+    {
+        hourstr = [NSMutableString stringWithFormat:@"0%d",h];
+    }
+    else
+    {
+        hourstr = [NSMutableString stringWithFormat:@"%d",h];
+    }
+    
+    if (m<10) 
+    {
+        minstr = [NSString stringWithFormat:@":0%d",m];
+    }
+    else 
+    {
+        minstr = [NSString stringWithFormat:@":%d",m];
+    }
+    
+    
+    [hourstr appendString:minstr];
+    
+    [timeLabel setText:hourstr];
+    
+    
     m++;
     if (m == 60) {
         h++;
@@ -235,6 +263,7 @@ static int h,m;
     }
     return self;
 }
+
 #pragma mark - Life
 
 - (void)viewDidLoad
@@ -287,7 +316,7 @@ static int h,m;
             cells[i][j].isBlank = [sudokuCreator isBlankCellWithX:i Y:j];
             
             
-            if ([sudokuCreator isBlankCellWithX:i Y:j] == NO) //显示数字的
+            if ([sudokuCreator isBlankCellWithX:i Y:j] == NO) //已知的数字
             {                    
                 cells[i][j].userValue =  cells[i][j].value;
                 [cells[i][j] setTitle:[NSString stringWithFormat:@"%d",cells[i][j].userValue] forState: UIControlStateNormal];
