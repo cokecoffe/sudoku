@@ -11,6 +11,8 @@
 
 @class ModeSelectViewController;
 @class SoundViewController;
+@class AboutViewViewController;
+@class MoreViewController;
 
 @interface FirstViewController : UIViewController
 {
@@ -21,16 +23,21 @@
     UIView *topView;
     ModeSelectViewController *modeVC;
     SoundViewController *soundVC;
+    AboutViewViewController *aboutVC;
+    MoreViewController *moreVC;
 }
 
 @property (retain, nonatomic) IBOutlet UIButton *SoundSetButton;
 @property(assign,nonatomic) UIView *topView;
 @property(retain,nonatomic) ModeSelectViewController *modeVC;
 @property(retain,nonatomic) SoundViewController *soundVC;
+@property(retain,nonatomic) AboutViewViewController *aboutVC;
+@property(retain,nonatomic) MoreViewController *moreVC;
 
 -(IBAction)ModeSelect:(id)sender;
 -(IBAction)RankList:(id)sender;
 -(IBAction)StartGame:(id)sender;
 - (IBAction)SoundSetting:(id)sender;
+- (IBAction)AboutViewBT:(id)sender;
 
 @end

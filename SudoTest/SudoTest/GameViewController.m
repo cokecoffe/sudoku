@@ -70,7 +70,7 @@ static int h,m;
     [blocker removeFromSuperview];
     h = 0;
     m = 0;
-     gameTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateTimeLabel) userInfo:nil repeats:YES];
+    gameTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateTimeLabel) userInfo:nil repeats:YES];
 }
 
 - (IBAction)GameOptionPanelShow:(id)sender 
@@ -86,6 +86,7 @@ static int h,m;
 - (IBAction)CommitAnswer:(id)sender
 {
     int i,j;
+    [gameTimer invalidate];
     
     for (i=0; i<9; i++) 
     {
@@ -97,8 +98,9 @@ static int h,m;
                 return;
             }
         }
-    }
+    }    
     [self showAlert:@"完全正确"];
+    
 }
 
 - (IBAction)ChangeInputMode:(id)sender 
@@ -204,12 +206,26 @@ static int h,m;
 -(void)showAlert:(NSString *)message
 {
     UIAlertView *av = [[[UIAlertView alloc]initWithTitle:@"结果" message:message
-                                                delegate:nil 
+                                                delegate:self 
                                        cancelButtonTitle:@"返回"
                                        otherButtonTitles:@"玩下一局", nil]autorelease];
     [av show];
 }
 
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    switch (buttonIndex) {
+        case 0://back
+            gameTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateTimeLabel) userInfo:nil repeats:YES];
+            break;
+        case 1://new game
+            [self RestartGame:nil];
+            break;
+            
+        default:
+            break;
+    }
+}
 
 
 -(void)updateTimeLabel

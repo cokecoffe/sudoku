@@ -11,6 +11,8 @@
 #import "RankViewController.h"
 #import "GameViewController.h"
 #import "SoundViewController.h"
+#import "AboutViewViewController.h"
+#import "MoreViewController.h"
 
 @interface FirstViewController ()
 
@@ -22,6 +24,8 @@
 @synthesize topView;
 @synthesize modeVC;
 @synthesize soundVC;
+@synthesize aboutVC;
+@synthesize moreVC;
 
 #pragma mark - ButtonAction
 
@@ -52,6 +56,26 @@
     
     [gameController release];
 }
+//关于
+- (IBAction)AboutViewBT:(id)sender
+{
+    /*
+    AboutViewViewController *aboutviewController = [[AboutViewViewController alloc]initWithNibName:@"AboutViewViewController" bundle:nil];
+    
+    [self.navigationController pushViewController:aboutviewController animated:YES];
+    
+    [aboutviewController release];
+    */
+    
+    MoreViewController *moreviewController = [[MoreViewController alloc]initWithNibName:@"MoreViewController" bundle:nil];
+    
+    [self.navigationController pushViewController:moreviewController animated:YES];
+    
+    [moreviewController release];
+}
+
+
+
 /*声音设置*/
 - (IBAction)SoundSetting:(id)sender
 {
@@ -59,6 +83,8 @@
     [self addBlocker];
     [self.view addSubview:soundVC.view];    
 }
+
+
 - (void)closeTopView {
     [modeVC.view removeFromSuperview];
     [soundVC.view removeFromSuperview];
@@ -91,7 +117,6 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    [self.SoundSetButton setBackgroundImage:[UIImage imageNamed:@"set-but.png"] forState:UIControlStateHighlighted];
 }
 
 - (void)viewDidUnload
@@ -103,12 +128,16 @@
     // e.g. self.myOutlet = nil;
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+	[super viewWillAppear:animated];
+    
+	//[self.navigationController setNavigationBarHidden:YES animated:YES];
+}
+
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
-
-
 
 - (void)dealloc {
     [modeVC release];

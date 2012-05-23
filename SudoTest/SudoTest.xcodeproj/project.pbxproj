@@ -25,6 +25,10 @@
 		2B303FA6156261B400FFC510 /* submit.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B303FA5156261B400FFC510 /* submit.png */; };
 		2B46B042155ABDC800E349E7 /* Sudoku.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B46B041155ABDC800E349E7 /* Sudoku.m */; };
 		2B46B046155AC4EE00E349E7 /* Cell_Data.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B46B045155AC4EE00E349E7 /* Cell_Data.m */; };
+		2B82CF68156937A60078EF43 /* inbg.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B82CF67156937A60078EF43 /* inbg.png */; };
+		2B82CF6D15694F690078EF43 /* MoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B82CF6B15694F690078EF43 /* MoreViewController.m */; };
+		2B82CF6E15694F690078EF43 /* MoreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B82CF6C15694F690078EF43 /* MoreViewController.xib */; };
+		2B82CF76156A10D10078EF43 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B82CF75156A10D10078EF43 /* MessageUI.framework */; };
 		2BC28069156773D400BB6D01 /* gameops.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BC28068156773D400BB6D01 /* gameops.png */; };
 		2BC2806C1567A41700BB6D01 /* homgbg.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BC2806B1567A41700BB6D01 /* homgbg.png */; };
 		2BC2806E1567A67200BB6D01 /* home-but.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BC2806D1567A67200BB6D01 /* home-but.png */; };
@@ -35,6 +39,8 @@
 		2BC2807A1567B4CD00BB6D01 /* input-square_ye.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BC280791567B4CD00BB6D01 /* input-square_ye.png */; };
 		2BC2807C1567B6B500BB6D01 /* gameinputselect.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BC2807B1567B6B500BB6D01 /* gameinputselect.png */; };
 		2BC2807E1567D59800BB6D01 /* gamebg.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BC2807D1567D59700BB6D01 /* gamebg.png */; };
+		2BC31D6C1568E5E4003F1D86 /* AboutViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BC31D6A1568E5E4003F1D86 /* AboutViewViewController.m */; };
+		2BC31D6D1568E5E4003F1D86 /* AboutViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BC31D6B1568E5E4003F1D86 /* AboutViewViewController.xib */; };
 		2BC99AE915597DA300F928A2 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BC99ADA15597DA300F928A2 /* Default@2x.png */; };
 		2BC99AEE15597DA300F928A2 /* information.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BC99ADF15597DA300F928A2 /* information.png */; };
 		2BC99AEF15597DA300F928A2 /* levelselect-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BC99AE015597DA300F928A2 /* levelselect-button.png */; };
@@ -83,6 +89,11 @@
 		2B46B041155ABDC800E349E7 /* Sudoku.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sudoku.m; sourceTree = "<group>"; };
 		2B46B044155AC4EE00E349E7 /* Cell_Data.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cell_Data.h; sourceTree = "<group>"; };
 		2B46B045155AC4EE00E349E7 /* Cell_Data.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cell_Data.m; sourceTree = "<group>"; };
+		2B82CF67156937A60078EF43 /* inbg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = inbg.png; path = Pictures/inbg.png; sourceTree = SOURCE_ROOT; };
+		2B82CF6A15694F690078EF43 /* MoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreViewController.h; sourceTree = "<group>"; };
+		2B82CF6B15694F690078EF43 /* MoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreViewController.m; sourceTree = "<group>"; };
+		2B82CF6C15694F690078EF43 /* MoreViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MoreViewController.xib; sourceTree = "<group>"; };
+		2B82CF75156A10D10078EF43 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		2BC28068156773D400BB6D01 /* gameops.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = gameops.png; path = Pictures/gameops.png; sourceTree = SOURCE_ROOT; };
 		2BC2806B1567A41700BB6D01 /* homgbg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = homgbg.png; path = Pictures/homgbg.png; sourceTree = SOURCE_ROOT; };
 		2BC2806D1567A67200BB6D01 /* home-but.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "home-but.png"; path = "Pictures/home-but.png"; sourceTree = SOURCE_ROOT; };
@@ -93,6 +104,9 @@
 		2BC280791567B4CD00BB6D01 /* input-square_ye.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "input-square_ye.png"; path = "Pictures/input-square_ye.png"; sourceTree = SOURCE_ROOT; };
 		2BC2807B1567B6B500BB6D01 /* gameinputselect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = gameinputselect.png; path = Pictures/gameinputselect.png; sourceTree = SOURCE_ROOT; };
 		2BC2807D1567D59700BB6D01 /* gamebg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = gamebg.png; path = Pictures/gamebg.png; sourceTree = SOURCE_ROOT; };
+		2BC31D691568E5E4003F1D86 /* AboutViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewViewController.h; sourceTree = "<group>"; };
+		2BC31D6A1568E5E4003F1D86 /* AboutViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewViewController.m; sourceTree = "<group>"; };
+		2BC31D6B1568E5E4003F1D86 /* AboutViewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutViewViewController.xib; sourceTree = "<group>"; };
 		2BC99ADA15597DA300F928A2 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "Pictures/Default@2x.png"; sourceTree = SOURCE_ROOT; };
 		2BC99ADF15597DA300F928A2 /* information.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = information.png; path = Pictures/information.png; sourceTree = SOURCE_ROOT; };
 		2BC99AE015597DA300F928A2 /* levelselect-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "levelselect-button.png"; path = "Pictures/levelselect-button.png"; sourceTree = SOURCE_ROOT; };
@@ -132,6 +146,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B82CF76156A10D10078EF43 /* MessageUI.framework in Frameworks */,
 				2BEDD4EC1557EE5400CCA5BA /* UIKit.framework in Frameworks */,
 				2BEDD4EE1557EE5400CCA5BA /* Foundation.framework in Frameworks */,
 				2BEDD4F01557EE5400CCA5BA /* CoreGraphics.framework in Frameworks */,
@@ -185,6 +200,7 @@
 		2BEDD4EA1557EE5400CCA5BA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2B82CF75156A10D10078EF43 /* MessageUI.framework */,
 				2BEDD4EB1557EE5400CCA5BA /* UIKit.framework */,
 				2BEDD4ED1557EE5400CCA5BA /* Foundation.framework */,
 				2BEDD4EF1557EE5400CCA5BA /* CoreGraphics.framework */,
@@ -202,6 +218,12 @@
 				2BEDD5091557F04600CCA5BA /* FirstViewController.h */,
 				2BEDD50A1557F04600CCA5BA /* FirstViewController.m */,
 				2BEDD50B1557F04600CCA5BA /* FirstViewController.xib */,
+				2B82CF6A15694F690078EF43 /* MoreViewController.h */,
+				2B82CF6B15694F690078EF43 /* MoreViewController.m */,
+				2B82CF6C15694F690078EF43 /* MoreViewController.xib */,
+				2BC31D691568E5E4003F1D86 /* AboutViewViewController.h */,
+				2BC31D6A1568E5E4003F1D86 /* AboutViewViewController.m */,
+				2BC31D6B1568E5E4003F1D86 /* AboutViewViewController.xib */,
 				2BE0090C15581C580001CC85 /* RankViewController.h */,
 				2BE0090D15581C580001CC85 /* RankViewController.m */,
 				2BE0090E15581C580001CC85 /* RankViewController.xib */,
@@ -238,6 +260,7 @@
 		2BEDD5021557EE7C00CCA5BA /* Pictures */ = {
 			isa = PBXGroup;
 			children = (
+				2B82CF67156937A60078EF43 /* inbg.png */,
 				2BC28068156773D400BB6D01 /* gameops.png */,
 				2B303F9D1562031500FFC510 /* homesetbg.png */,
 				2BC99ADA15597DA300F928A2 /* Default@2x.png */,
@@ -354,6 +377,9 @@
 				2BC2807A1567B4CD00BB6D01 /* input-square_ye.png in Resources */,
 				2BC2807C1567B6B500BB6D01 /* gameinputselect.png in Resources */,
 				2BC2807E1567D59800BB6D01 /* gamebg.png in Resources */,
+				2BC31D6D1568E5E4003F1D86 /* AboutViewViewController.xib in Resources */,
+				2B82CF68156937A60078EF43 /* inbg.png in Resources */,
+				2B82CF6E15694F690078EF43 /* MoreViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,6 +403,8 @@
 				2B303F991562026500FFC510 /* SoundViewController.m in Sources */,
 				2B04E4241564FF2800237698 /* RecordItem.m in Sources */,
 				2B04E4271565034800237698 /* RecordManager.m in Sources */,
+				2BC31D6C1568E5E4003F1D86 /* AboutViewViewController.m in Sources */,
+				2B82CF6D15694F690078EF43 /* MoreViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
