@@ -7,6 +7,7 @@
 //
 
 #import "MoreViewController.h"
+#import "AboutViewViewController.h"
 
 
 @interface MoreViewController ()
@@ -29,7 +30,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    NSArray *array = [[NSArray alloc]initWithObjects:@"帮助",@"分享到微博",@"给Sudoku打分",@"联系我们",@"关于我们",nil];
+    NSArray *array = [[NSArray alloc]initWithObjects:/*@"帮助",@"分享到微博",@"给Sudoku打分",*/@"联系我们",@"关于",nil];
     self.listData = array;
     [array release];
 }
@@ -49,7 +50,7 @@
 
 - (void)viewWillAppear:(BOOL)animated {
 	[super viewWillAppear:animated];
-    self.navigationItem.title = @"更多";
+//    self.navigationItem.title = @"更多";
 	[self.navigationController setNavigationBarHidden:NO animated:YES];
 }
 
@@ -82,6 +83,8 @@
     
     NSUInteger row = [indexPath row];
     cell.textLabel.text = [listData objectAtIndex:row];
+    cell.selectionStyle = UITableViewCellSelectionStyleGray;
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     return cell;
 }
 #pragma mark - TableView Delegate Methods
@@ -90,7 +93,7 @@
 {
     switch ([indexPath row]) 
     {
-        case 3://send email to me
+        case 0://send email to me
         {
             if (![MFMailComposeViewController canSendMail])
             {
@@ -109,10 +112,21 @@
             [mailcontroller release];
         }
             break;
+        case 1://About
+        {
+            AboutViewViewController *aboutVC = [[AboutViewViewController alloc]init];
+            
+            [self.navigationController pushViewController:aboutVC animated:YES];
+            
+            [aboutVC release];
+        }
+            
             
         default:
             break;
     }
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:NO]; 
 }
 #pragma mark - MailDelegate
 

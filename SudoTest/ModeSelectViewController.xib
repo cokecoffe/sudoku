@@ -58,7 +58,7 @@
 					</object>
 					<object class="IBUISegmentedControl" id="590357723">
 						<reference key="NSNextResponder" ref="191373211"/>
-						<int key="NSvFlags">292</int>
+						<int key="NSvFlags">-2147483356</int>
 						<string key="NSFrame">{{35, 54}, {137, 30}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
@@ -93,10 +93,9 @@
 					<object class="IBUISegmentedControl" id="1038299402">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{27, 138}, {152, 30}}</string>
+						<string key="NSFrame">{{27, 117}, {152, 30}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -131,7 +130,7 @@
 					</object>
 					<object class="IBUILabel" id="704955060">
 						<reference key="NSNextResponder" ref="191373211"/>
-						<int key="NSvFlags">292</int>
+						<int key="NSvFlags">-2147483356</int>
 						<string key="NSFrame">{{20, 18}, {51, 21}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
@@ -163,7 +162,7 @@
 					<object class="IBUILabel" id="467216670">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{20, 101}, {51, 21}}</string>
+						<string key="NSFrame">{{20, 83}, {51, 21}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="1038299402"/>
@@ -253,9 +252,9 @@
 						<array class="NSMutableArray" key="children">
 							<reference ref="357720420"/>
 							<reference ref="704955060"/>
-							<reference ref="1038299402"/>
-							<reference ref="467216670"/>
 							<reference ref="590357723"/>
+							<reference ref="467216670"/>
+							<reference ref="1038299402"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -365,7 +364,7 @@
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<object class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
 			<string key="NS.key.0">homelevelselectbg.png</string>
-			<string key="NS.object.0">{412, 412}</string>
+			<string key="NS.object.0">{406, 406}</string>
 		</object>
 		<string key="IBCocoaTouchPluginVersion">1181</string>
 	</data>

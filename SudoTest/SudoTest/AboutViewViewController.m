@@ -39,8 +39,6 @@
 
 - (void)viewWillAppear:(BOOL)animated {
 	[super viewWillAppear:animated];
-    self.navigationController.navigationBar.tintColor = [UIColor blackColor];
-    self.navigationItem.title = @"关于";
 	[self.navigationController setNavigationBarHidden:NO animated:YES];
 }
 
