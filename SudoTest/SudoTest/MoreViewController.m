@@ -108,7 +108,7 @@
             [mailcontroller setMessageBody:@"在此填写您的建议或者软件的问题" isHTML:NO];
             
             [self presentModalViewController:mailcontroller animated:YES];
-           
+            [addArray release];
             [mailcontroller release];
         }
             break;
