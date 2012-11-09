@@ -29,8 +29,8 @@
 
 -(IBAction)GameModeSelect:(id)sender
 {
-    UISegmentedControl *modeSelect = (UISegmentedControl *)sender;
-    NSInteger Index = modeSelect.selectedSegmentIndex;
+    UISegmentedControl *_modeSelect = (UISegmentedControl *)sender;
+    NSInteger Index = _modeSelect.selectedSegmentIndex;
     
     if (Index == 0) 
     {
@@ -44,8 +44,8 @@
 
 -(IBAction)GameLevelSelect:(id)sender
 {
-    UISegmentedControl *levelSelect = (UISegmentedControl *)sender;
-    NSInteger Index = levelSelect.selectedSegmentIndex;
+    UISegmentedControl *_levelSelect = (UISegmentedControl *)sender;
+    NSInteger Index = _levelSelect.selectedSegmentIndex;
 
     switch (Index) {
         case 0:
