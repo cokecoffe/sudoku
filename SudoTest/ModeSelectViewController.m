@@ -29,9 +29,10 @@
 
 -(IBAction)GameModeSelect:(id)sender
 {
+
     UISegmentedControl *_modeSelect = (UISegmentedControl *)sender;
     NSInteger Index = _modeSelect.selectedSegmentIndex;
-    
+
     if (Index == 0) 
     {
         gGameMode = MODE_TIME;
@@ -44,6 +45,7 @@
 
 -(IBAction)GameLevelSelect:(id)sender
 {
+
     UISegmentedControl *_levelSelect = (UISegmentedControl *)sender;
     NSInteger Index = _levelSelect.selectedSegmentIndex;
 
