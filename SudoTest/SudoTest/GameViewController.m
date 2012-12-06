@@ -68,6 +68,9 @@ static int h,m;
     
     [panelView removeFromSuperview];
     [blocker removeFromSuperview];
+    [blocker release];
+    self->blocker = nil;
+    
     h = 0;
     m = 0;
     gameTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateTimeLabel) userInfo:nil repeats:YES];
@@ -268,6 +271,8 @@ static int h,m;
     gameTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateTimeLabel) userInfo:nil repeats:YES];
     [panelView removeFromSuperview];
     [blocker removeFromSuperview];
+    [blocker release];
+    self->blocker = nil;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -389,13 +394,13 @@ static int h,m;
     gameTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateTimeLabel) userInfo:nil repeats:YES];
     [panelView removeFromSuperview];
     [blocker removeFromSuperview];
+    [blocker release];
+    self->blocker = nil;
 }
 
 - (void)addBlocker {
     blocker = [[UIButton alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 320.0f, 480.0f)];
     [blocker addTarget:self action:@selector(closeTopView) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:blocker];
-    
-    [blocker release];
 }
 @end

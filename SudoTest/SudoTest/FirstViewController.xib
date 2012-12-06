@@ -2,19 +2,19 @@
 <archive type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="8.00">
 	<data>
 		<int key="IBDocument.SystemTarget">1296</int>
-		<string key="IBDocument.SystemVersion">11E53</string>
-		<string key="IBDocument.InterfaceBuilderVersion">2182</string>
-		<string key="IBDocument.AppKitVersion">1138.47</string>
-		<string key="IBDocument.HIToolboxVersion">569.00</string>
+		<string key="IBDocument.SystemVersion">12A269</string>
+		<string key="IBDocument.InterfaceBuilderVersion">2549</string>
+		<string key="IBDocument.AppKitVersion">1187</string>
+		<string key="IBDocument.HIToolboxVersion">624.00</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginVersions">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-			<string key="NS.object.0">1181</string>
+			<string key="NS.object.0">1498</string>
 		</object>
 		<array key="IBDocument.IntegratedClassDependencies">
+			<string>IBProxyObject</string>
 			<string>IBUIButton</string>
 			<string>IBUIImageView</string>
 			<string>IBUIView</string>
-			<string>IBProxyObject</string>
 		</array>
 		<array key="IBDocument.PluginDependencies">
 			<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -77,12 +77,14 @@
 							<string key="NSClassName">NSImage</string>
 							<string key="NSResourceName">home-but.png</string>
 						</object>
-						<object class="IBUIFontDescription" key="IBUIFontDescription" id="379976273">
-							<int key="type">2</int>
+						<object class="IBUIFontDescription" key="IBUIFontDescription" id="462779615">
+							<string key="name">Arial-BoldMT</string>
+							<string key="family">Arial</string>
+							<int key="traits">2</int>
 							<double key="pointSize">15</double>
 						</object>
-						<object class="NSFont" key="IBUIFont" id="238205745">
-							<string key="NSName">Helvetica-Bold</string>
+						<object class="NSFont" key="IBUIFont" id="561364658">
+							<string key="NSName">Arial-BoldMT</string>
 							<double key="NSSize">15</double>
 							<int key="NSfFlags">16</int>
 						</object>
@@ -104,8 +106,15 @@
 						<reference key="IBUINormalTitleColor" ref="623550130"/>
 						<reference key="IBUINormalTitleShadowColor" ref="13181829"/>
 						<reference key="IBUINormalBackgroundImage" ref="762058382"/>
-						<reference key="IBUIFontDescription" ref="379976273"/>
-						<reference key="IBUIFont" ref="238205745"/>
+						<object class="IBUIFontDescription" key="IBUIFontDescription" id="379976273">
+							<int key="type">2</int>
+							<double key="pointSize">15</double>
+						</object>
+						<object class="NSFont" key="IBUIFont" id="687508030">
+							<string key="NSName">Helvetica-Bold</string>
+							<double key="NSSize">15</double>
+							<int key="NSfFlags">16</int>
+						</object>
 					</object>
 					<object class="IBUIButton" id="742965999">
 						<reference key="NSNextResponder" ref="191373211"/>
@@ -119,13 +128,13 @@
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
 						<int key="IBUIContentVerticalAlignment">0</int>
-						<string key="IBUINormalTitle">模式</string>
+						<string key="IBUINormalTitle">难度</string>
 						<reference key="IBUIHighlightedTitleColor" ref="623550130"/>
 						<reference key="IBUINormalTitleColor" ref="623550130"/>
 						<reference key="IBUINormalTitleShadowColor" ref="13181829"/>
 						<reference key="IBUINormalBackgroundImage" ref="762058382"/>
-						<reference key="IBUIFontDescription" ref="379976273"/>
-						<reference key="IBUIFont" ref="238205745"/>
+						<reference key="IBUIFontDescription" ref="462779615"/>
+						<reference key="IBUIFont" ref="561364658"/>
 					</object>
 					<object class="IBUIButton" id="921279134">
 						<reference key="NSNextResponder" ref="191373211"/>
@@ -133,7 +142,6 @@
 						<string key="NSFrame">{{270, 442}, {30, 30}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -150,7 +158,7 @@
 							<string key="NSResourceName">information.png</string>
 						</object>
 						<reference key="IBUIFontDescription" ref="379976273"/>
-						<reference key="IBUIFont" ref="238205745"/>
+						<reference key="IBUIFont" ref="687508030"/>
 					</object>
 					<object class="IBUIButton" id="819385889">
 						<reference key="NSNextResponder" ref="191373211"/>
@@ -179,7 +187,7 @@
 							<string key="NSResourceName">set.png</string>
 						</object>
 						<reference key="IBUIFontDescription" ref="379976273"/>
-						<reference key="IBUIFont" ref="238205745"/>
+						<reference key="IBUIFont" ref="687508030"/>
 					</object>
 				</array>
 				<string key="NSFrameSize">{320, 480}</string>
@@ -326,9 +334,9 @@
 							<reference ref="262747247"/>
 							<reference ref="742965999"/>
 							<reference ref="614065410"/>
-							<reference ref="380021152"/>
 							<reference ref="819385889"/>
 							<reference ref="921279134"/>
+							<reference ref="380021152"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -464,6 +472,6 @@
 			<string key="set-but.png">{64, 64}</string>
 			<string key="set.png">{60, 59}</string>
 		</dictionary>
-		<string key="IBCocoaTouchPluginVersion">1181</string>
+		<string key="IBCocoaTouchPluginVersion">1498</string>
 	</data>
 </archive>

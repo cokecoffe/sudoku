@@ -54,12 +54,6 @@
 	[self.navigationController setNavigationBarHidden:NO animated:YES];
 }
 
-- (void)viewWillDisappear:(BOOL)animated {
-	[super viewWillDisappear:animated];
-    
-	[self.navigationController setNavigationBarHidden:YES animated:YES];
-}
-
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
@@ -67,9 +61,14 @@
 
 #pragma mark - TableView DataSource Methods
 
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return [listData count];
+}
+
 - (NSInteger)tableView:(UITableView *)table numberOfRowsInSection:(NSInteger)section
 {
-    return [listData count];   
+    return 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -81,17 +80,17 @@
         cell = [[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:SimpleTableIdentifier]autorelease];
     }
     
-    NSUInteger row = [indexPath row];
-    cell.textLabel.text = [listData objectAtIndex:row];
+    cell.textLabel.text = [listData objectAtIndex:indexPath.section];
     cell.selectionStyle = UITableViewCellSelectionStyleGray;
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+
     return cell;
 }
 #pragma mark - TableView Delegate Methods
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    switch ([indexPath row]) 
+    switch ([indexPath section])
     {
         case 0://send email to me
         {
